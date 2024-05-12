@@ -12,5 +12,13 @@
     "Description": "en masse løb og godbider",
     "City": "Roskilde",
     "DateTime": null
+  },
+
+  "3": {
+    "Id": 3,
+    "Name": "DM i lydighed",
+    "Description": "Stor landsdækkene konkurrence",
+    "City": "Næstved",
+    "DateTime": null
   }
 }
