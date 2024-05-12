@@ -1,3 +1,16 @@
 {
-
+  "1": {
+    "Id": 1,
+    "Name": "Valpe træning",
+    "Description": "mange valpe der leger",
+    "City": "Holbæk",
+    "DateTime": null
+  },
+  "2": {
+    "Id": 2,
+    "Name": "Agility træning",
+    "Description": "en masse løb og godbider",
+    "City": "Roskilde",
+    "DateTime": null
+  }
 }

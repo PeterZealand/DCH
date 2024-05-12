@@ -1,4 +1,70 @@
 ﻿@page
 @model DCH.Pages.Events.GetAllEventsModel
 @{
+    ViewData["Title"] = "GetAllEvents";
 }
+<h1>GetAllEvents</h1>
+
+<p>
+    <a asp-page="CreateEvent">Create New Event</a>
+</p>
+<form>
+    <p>
+        
+    </p>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                DateTime
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @item.Value.Id
+                </td>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.City
+                </td>
+                <td>
+                    @item.Value.DateTime
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="EditEvent" asp-route-id="@item.Key">Edit</a>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <a asp-page="DeleteEvent" asp-route-id="@item.Key">Delete</a>
+                    </p>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
