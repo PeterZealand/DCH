@@ -10,6 +10,6 @@ namespace DCH.Interfaces
         void DeleteEvent(int id);
         void AddEvent(Event Event);
         void UpdateEvent(Event Event);
-        Event GetEvent(int id);
+        Event GetEvents(int id);
     }
 }

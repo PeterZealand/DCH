@@ -28,10 +28,10 @@ namespace DCH.Services
             throw new NotImplementedException();
         }
 
-        public Event GetEvent(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //public Event GetEvent(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public Event GetEvents(int id)
         {
@@ -41,7 +41,12 @@ namespace DCH.Services
 
         public void UpdateEvent(Event Event)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            if (Event != null)
+            {
+                events[(int)Event.Id] = Event;
+            }
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
     }
 }
