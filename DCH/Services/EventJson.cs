@@ -23,7 +23,7 @@ namespace DCH.Services
             throw new NotImplementedException();
         }
 
-        public Dictionary<int, Event> FilterEvents(string crtiteria)
+        public Dictionary<int, Event> FilterEvents(string criteria)
         {
             throw new NotImplementedException();
         }
