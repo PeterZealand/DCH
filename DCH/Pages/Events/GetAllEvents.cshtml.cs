@@ -20,6 +20,11 @@ namespace DCH.Pages.Events
         public Dictionary<int, Event> Events { get; private set; }
         public IActionResult OnGet()
         {
+            Events = catalog.AllEvents();
+            if (!string.IsNullOrEmpty(FilterCriteria))
+            {
+                Events = catalog.FilterEvents(FilterCriteria);
+            }
             return Page();
         }
     }
