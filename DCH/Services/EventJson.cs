@@ -31,7 +31,7 @@ namespace DCH.Services
         }
 
 
-        public Event GetEvent(int id)
+        public Event GetEvents(int id)
         {
             Dictionary<int, Event> events = AllEvents();
             return events[id];

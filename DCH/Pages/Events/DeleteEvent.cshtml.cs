@@ -19,7 +19,7 @@ namespace DCH.Pages.Events
 
         public IActionResult OnGet(int id)
             {
-                Event = catalog.GetEvent(id);
+                Event = catalog.GetEvents(id);
                 return Page();
             }
 
