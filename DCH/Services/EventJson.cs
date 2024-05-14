@@ -20,7 +20,9 @@ namespace DCH.Services
 
         public void DeleteEvent(int id)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            events.Remove(id);
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
 
         public Dictionary<int, Event> FilterEvents(string criteria)
@@ -28,16 +30,18 @@ namespace DCH.Services
             throw new NotImplementedException();
         }
 
-        //public Event GetEvent(int id)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
-        public Event GetEvents(int id)
+        public Event GetEvent(int id)
         {
             Dictionary<int, Event> events = AllEvents();
             return events[id];
         }
+
+        //public Event GetEvents(int id)
+        //{
+        //    Dictionary<int, Event> events = AllEvents();
+        //    return events[id];
+        //}
 
         public void UpdateEvent(Event Event)
         {
