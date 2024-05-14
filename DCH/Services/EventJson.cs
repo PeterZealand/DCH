@@ -6,11 +6,16 @@ namespace DCH.Services
 {
     public class EventJson : IEventRepository
     {
-        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json";
+        string JsonFileName = @"C:\Users\mlber\Source\Repos\DCH\DCH\Data\JsonEvents.json";
 
         public void AddEvent(Event Event)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            if (Event != null)
+            {
+                events[(int)Event.Id] = Event;
+            }
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
 
         public Dictionary<int, Event> AllEvents()
