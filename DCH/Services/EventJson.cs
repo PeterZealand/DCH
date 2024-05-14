@@ -6,11 +6,16 @@ namespace DCH.Services
 {
     public class EventJson : IEventRepository
     {
-        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json";
+        string JsonFileName = @"C:\Users\mlber\Source\Repos\DCH\DCH\Data\JsonEvents.json";
 
         public void AddEvent(Event Event)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            if (Event != null)
+            {
+                events[(int)Event.Id] = Event;
+            }
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
 
         public Dictionary<int, Event> AllEvents()
@@ -20,7 +25,9 @@ namespace DCH.Services
 
         public void DeleteEvent(int id)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            events.Remove(id);
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
 
         public Dictionary<int, Event> FilterEvents(string criteria)
@@ -28,10 +35,6 @@ namespace DCH.Services
             throw new NotImplementedException();
         }
 
-        public Event GetEvent(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public Event GetEvents(int id)
         {
@@ -39,9 +42,20 @@ namespace DCH.Services
             return events[id];
         }
 
+        //public Event GetEvents(int id)
+        //{
+        //    Dictionary<int, Event> events = AllEvents();
+        //    return events[id];
+        //}
+
         public void UpdateEvent(Event Event)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> events = AllEvents();
+            if (Event != null)
+            {
+                events[(int)Event.Id] = Event;
+            }
+            JsonFileWriter.WriteToJson(events, JsonFileName);
         }
     }
 }
