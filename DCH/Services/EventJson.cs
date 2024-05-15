@@ -6,16 +6,49 @@ namespace DCH.Services
 {
     public class EventJson : IEventRepository
     {
-        string JsonFileName = @"C:\Users\mlber\Source\Repos\DCH\DCH\Data\JsonEvents.json";
+        string JsonFileName = @"C:\Users\papri\OneDrive - Zealand\Skrivebord\Projekt 1. sem\DcH\DCH\Data\JsonEvents.json";
+        //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json
 
-        public void AddEvent(Event Event)
+        private readonly Dictionary<int, Event> events = new Dictionary<int, Event>();
+        private int currentId = 0;
+
+        public EventJson()
         {
-            Dictionary<int, Event> events = AllEvents();
-            if (Event != null)
+            events = AllEvents();
+
+            if (events.Keys.Any())
             {
-                events[(int)Event.Id] = Event;
+                currentId = events.Keys.Max() + 1;
             }
+            else
+            {
+                currentId = 0;
+            }
+        }
+
+        //public void AddEvent(Event Event)
+        //{
+        //    Dictionary<int, Event> events = AllEvents();
+        //    if (Event != null)
+        //    {
+        //        events[(int)Event.Id] = Event;
+        //    }
+        //    JsonFileWriter.WriteToJson(events, JsonFileName);
+        //}
+
+        public void AddEvent(Event ev)
+        {
+            if (ev != null)
+            {
+                ev.Id = currentId++;
+            }
+            events[ev.Id] = ev;
             JsonFileWriter.WriteToJson(events, JsonFileName);
+        }
+
+        public void AddEventIdNo(Event ev)
+        {
+            ev.Id = currentId++;
         }
 
         public Dictionary<int, Event> AllEvents()
