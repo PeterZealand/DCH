@@ -19,7 +19,7 @@ namespace DCH.Pages.Events
 
         public IActionResult OnGet(int id)
         {
-            
+            Event = new Event();
             return Page();
         }
 
@@ -29,8 +29,10 @@ namespace DCH.Pages.Events
             {
                 return Page();
             }
-
-            catalog.AddEvent(Event);
+            if (Event.Id == 0)
+            {
+                catalog.AddEvent(Event);
+            }
 
             return RedirectToPage("GetAllEvents");
         }

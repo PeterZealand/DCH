@@ -18,9 +18,9 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+@*             <th>
                 Id
-            </th>
+            </th> *@
             <th>
                 Name
             </th>
@@ -33,15 +33,21 @@
             <th>
                 DateTime
             </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model.Events)
         {
             <tr>
-                <td>
+@*                 <td>
                     @item.Value.Id
-                </td>
+                </td> *@
                 <td>
                     @item.Value.Name
                 </td>
