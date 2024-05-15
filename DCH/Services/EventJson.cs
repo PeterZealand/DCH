@@ -65,8 +65,21 @@ namespace DCH.Services
 
         public Dictionary<int, Event> FilterEvents(string criteria)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Event> Event = AllEvents();
+            Dictionary<int, Event> myEvents = new Dictionary<int, Event>();
+            if (criteria != null)
+            {
+                foreach (var e in Event.Values)
+                {
+                    if (e.Name.Contains(criteria, StringComparison.OrdinalIgnoreCase) || e.City.Contains(criteria, StringComparison.OrdinalIgnoreCase))
+                    {
+                        myEvents.Add(e.Id, e);
+                    }
+                }
+            }
+            return myEvents;
         }
+    
 
 
         public Event GetEvents(int id)
