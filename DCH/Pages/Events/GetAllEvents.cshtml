@@ -8,12 +8,13 @@
 <p>
     <a asp-page="CreateEvent">Create New Event</a>
 </p>
-<form>
-    <p>
-        
+<form id="søg">
+    <p >
+        <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Søg" />
     </p>
-</form>
 
+</form>
 
 <table class="table">
     <thead>
