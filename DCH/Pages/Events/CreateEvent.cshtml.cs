@@ -33,7 +33,6 @@ namespace DCH.Pages.Events
             {
                 catalog.AddEvent(Event);
             }
-
             return RedirectToPage("GetAllEvents");
         }
     }
