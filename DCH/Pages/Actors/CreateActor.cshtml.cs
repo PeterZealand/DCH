@@ -3,15 +3,15 @@ using DCH.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace DCH.Pages.Actor
+namespace DCH.Pages.Actors
 {
-    public class CreateActorModel : PageModel
+    public class CreateActorsModel : PageModel
     {
         private IActorRepository catalog;
         [BindProperty]
         public Actor Actor { get; set; }
 
-        public CreateActorModel(IActorRepository cat)
+        public CreateActorsModel(IActorRepository cat)
         {
             catalog = cat;
         }
@@ -33,7 +33,7 @@ namespace DCH.Pages.Actor
             {
                 catalog.AddActor(Actor);
             }
-            return RedirectToPage("GetAllEvents");
+            return RedirectToPage("GetAllActors");
         }
     
     public void OnGet()

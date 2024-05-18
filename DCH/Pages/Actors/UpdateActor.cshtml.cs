@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace DCH.Pages.Actor
+namespace DCH.Pages.Actors
 {
-    public class DeleteActorModel : PageModel
+    public class UpdateActorsModel : PageModel
     {
         public void OnGet()
         {
