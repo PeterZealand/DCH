@@ -7,7 +7,7 @@ namespace DCH.Services
 {
     public class ActorJson : IActorRepository
     {
-        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json";
+        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json";
         //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json
 
         private readonly Dictionary<int, Actor> actors = new Dictionary<int, Actor>();
