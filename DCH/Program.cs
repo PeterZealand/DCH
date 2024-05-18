@@ -22,6 +22,7 @@ namespace DCH
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddTransient<IEventRepository, EventJson>();
+            builder.Services.AddTransient<IActorRepository, ActorJson>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
