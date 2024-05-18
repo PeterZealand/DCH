@@ -36,8 +36,8 @@ namespace DCH.Pages.Actors
             return RedirectToPage("GetAllActors");
         }
     
-    public void OnGet()
-        {
-        }
+    //public void OnGet()
+    //    {
+    //    }
     }
 }
