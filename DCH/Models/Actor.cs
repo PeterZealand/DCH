@@ -10,7 +10,6 @@
         public string City { get; set; }
         public int PhoneNumber { get; set; }
         public bool Dog { get; set; }
-
         
     }
 }
