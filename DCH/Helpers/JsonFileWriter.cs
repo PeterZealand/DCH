@@ -15,5 +15,12 @@ namespace DCH.Helpers
 
             File.WriteAllText(JsonFileName, output);
         }
+        public static void WriteToJsonAc(Dictionary<int, Actor> actors, string JsonFileName)
+        {
+            string output = Newtonsoft.Json.JsonConvert.SerializeObject(actors,
+                                                               Newtonsoft.Json.Formatting.Indented);
+
+            File.WriteAllText(JsonFileName, output);
+        }
     }
 }

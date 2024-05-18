@@ -7,7 +7,7 @@ namespace DCH.Services
 {
     public class ActorJson : IActorRepository
     {
-        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json";
+        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json";
         //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json
 
         private readonly Dictionary<int, Actor> actors = new Dictionary<int, Actor>();
@@ -28,9 +28,22 @@ namespace DCH.Services
         }
 
 
-        public void AddActor(Actor Actor)
+        public void AddActor(Actor ac)
         {
-            throw new NotImplementedException();
+            {
+                if (ac != null)
+                {
+                    ac.Id = currentId++;
+                }
+                actors[ac.Id] = ac;
+                JsonFileWriter.WriteToJsonAc(actors, JsonFileName);
+            }
+
+            public void AddActorIdNo(Actor ac)
+            {
+                ac.Id = currentId++;
+            }
+
         }
 
         public Dictionary<int, Actor> AllActors()
@@ -48,9 +61,10 @@ namespace DCH.Services
             throw new NotImplementedException();
         }
 
-        public Event GetActors(int id)
+        public Actor GetActors(int id)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Actor> actors = AllActors();
+            return actors[id];
         }
 
         public void UpdateActor(Actor Actor)

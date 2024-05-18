@@ -1,4 +1,58 @@
 ﻿@page
 @model DCH.Pages.Actor.CreateActorModel
 @{
+    ViewData["Title"] = "Create Actor";
 }
+<h1>Create Actor</h1>
+
+<form method="post">
+
+    <div class="form-group">
+        @* <label asp-for="@Model.Actor.Id" class="control-label"></label> *@
+        <input asp-for="@Model.Actor.Id" class="form-control" type="hidden" />
+        <span asp-validation-for="@Model.Actor.Id" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.FirstName" class="control-label">FirstName </label>
+        <input asp-for="@Model.Actor.FirstName" class="form-control" />
+        <span asp-validation-for="@Model.Actor.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.LastName" class="control-label">LastName</label>
+        <input asp-for="@Model.Actor.LastName" class="form-control" />
+        <span asp-validation-for="@Model.Actor.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.Email" class="control-label">Email</label>
+        <input asp-for="@Model.Actor.Email" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.Address" class="control-label">Address</label>
+        <input asp-for="@Model.Actor.Address" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.City" class="control-label">City</label>
+        <input asp-for="@Model.Actor.City" class="form-control" />
+        <span asp-validation-for="@Model.Actor.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.PhoneNumber" class="control-label">PhoneNumber</label>
+        <input asp-for="@Model.Actor.PhoneNumber" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.Dog" class="control-label">Dog</label>
+        <input asp-for="@Model.Actor.Dog" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+
+    <div>
+        <a asp-page="/Actors/GetAllActors">Back to actor list</a>
+    </div>
+</form>
