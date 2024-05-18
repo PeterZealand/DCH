@@ -13,5 +13,12 @@ namespace DCH.Helpers
             string jsonString = File.ReadAllText(JsonFileName);
             return JsonConvert.DeserializeObject<Dictionary<int, Event>>(jsonString);
         }
+
+        public static Dictionary<int, Actor> ReadJsonAc(string JsonFileName)
+        {
+            string jsonString = File.ReadAllText(JsonFileName);
+            return JsonConvert.DeserializeObject<Dictionary<int, Actor>>(jsonString);
+        }
+
     }
 }
