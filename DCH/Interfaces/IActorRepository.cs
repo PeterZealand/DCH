@@ -9,6 +9,6 @@ namespace DCH.Interfaces
         void DeleteActor(int id);
         void AddActor(Actor Actor);
         void UpdateActor(Actor Actor);
-        Event GetActors(int id);
+        Actor GetActors(int id);
     }
 }

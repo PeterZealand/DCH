@@ -27,7 +27,6 @@ namespace DCH.Services
             }
         }
 
-
         public void AddActor(Actor ac)
         {
             {
@@ -38,13 +37,14 @@ namespace DCH.Services
                 actors[ac.Id] = ac;
                 JsonFileWriter.WriteToJsonAc(actors, JsonFileName);
             }
+        }
 
-            public void AddActorIdNo(Actor ac)
+        public void AddActorIdNo(Actor ac)
             {
                 ac.Id = currentId++;
             }
 
-        }
+        
 
         public Dictionary<int, Actor> AllActors()
         {
