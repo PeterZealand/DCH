@@ -1,3 +1,22 @@
 {
-
+  "0": {
+    "Id": 0,
+    "FirstName": "Paprika",
+    "LastName": "Seidler",
+    "Email": "123@hotmail.com",
+    "Address": "adersse 1",
+    "City": "by 1",
+    "PhoneNumber": 11223344,
+    "Dog": true
+  },
+  "1": {
+    "Id": 1,
+    "FirstName": "test",
+    "LastName": "test",
+    "Email": "123@hotmail.com",
+    "Address": "null",
+    "City": "null",
+    "PhoneNumber": 12341234,
+    "Dog": false
+  }
 }
