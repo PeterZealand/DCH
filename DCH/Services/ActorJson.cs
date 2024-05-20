@@ -7,7 +7,7 @@ namespace DCH.Services
 {
     public class ActorJson : IActorRepository
     {
-        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json";
+        string JsonFileName = @"C:\Users\mlber\source\repos\DCH\DCH\Data\JsonActors.json";
         //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json
 
         private readonly Dictionary<int, Actor> actors = new Dictionary<int, Actor>();
@@ -52,8 +52,10 @@ namespace DCH.Services
         }
 
         public void DeleteActor(int id)
-        {
-            throw new NotImplementedException();
+        { 
+            Dictionary<int, Actor> actors = AllActors();
+            actors.Remove(id);
+            JsonFileWriter.WriteToJsonAc(actors, JsonFileName);
         }
 
         public Dictionary<int, Actor> FilterActors(string criteria)
