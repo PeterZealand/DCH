@@ -13,12 +13,12 @@
         <span asp-validation-for="@Model.Actor.Id" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.FirstName" class="control-label">FirstName </label>
+        <label asp-for="@Model.Actor.FirstName" class="control-label">Fornavn</label>
         <input asp-for="@Model.Actor.FirstName" class="form-control" />
         <span asp-validation-for="@Model.Actor.FirstName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.LastName" class="control-label">LastName</label>
+        <label asp-for="@Model.Actor.LastName" class="control-label">Efternavn</label>
         <input asp-for="@Model.Actor.LastName" class="form-control" />
         <span asp-validation-for="@Model.Actor.LastName" class="text-danger"></span>
     </div>
@@ -28,17 +28,17 @@
         <span asp-validation-for="@Model.Actor.Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.Address" class="control-label">Address</label>
+        <label asp-for="@Model.Actor.Address" class="control-label">Adresse</label>
         <input asp-for="@Model.Actor.Address" class="form-control" />
         <span asp-validation-for="@Model.Actor.Address" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.City" class="control-label">City</label>
+        <label asp-for="@Model.Actor.City" class="control-label">By</label>
         <input asp-for="@Model.Actor.City" class="form-control" />
         <span asp-validation-for="@Model.Actor.City" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.PhoneNumber" class="control-label">PhoneNumber</label>
+        <label asp-for="@Model.Actor.PhoneNumber" class="control-label">Tlf. Nr.</label>
         <input asp-for="@Model.Actor.PhoneNumber" class="form-control" />
         <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
     </div>
@@ -53,6 +53,6 @@
     </div>
 
     <div>
-        <a asp-page="/Actors/GetAllActors">Back to actor list</a>
+        <a asp-page="/Actors/GetAllActors">Tilbage til bruger listen</a>
     </div>
 </form>

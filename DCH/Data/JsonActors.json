@@ -20,3 +20,15 @@
     "City": "null",
     "PhoneNumber": 12341234,
     "Dog": false
+  },
+  "2": {
+    "Id": 2,
+    "FirstName": "Peter",
+    "LastName": "Eriksen",
+    "Email": "peteremail@gmail.com",
+    "Address": "Peter adresse",
+    "City": "Holbæk",
+    "PhoneNumber": 21212121,
+    "Dog": true
+  }
+}

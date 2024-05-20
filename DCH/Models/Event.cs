@@ -8,6 +8,8 @@ namespace DCH.Models
 
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "Beskrivelse af din event er nødvendig og må maks være på 200 tegn"),
+            MinLength(1), MaxLength(200),]
         public string Description { get; set; }
 
         public string City { get; set; }
