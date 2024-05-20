@@ -4,8 +4,9 @@ namespace DCH.Models
 {
     public class Event
     {
-        public int Id { get; set; } 
+        public int Id { get; set; }
 
+        [Required(ErrorMessage = "Navn på event er påkrævet og må max være 40 tegn."), MinLength(1), MaxLength(40)]
         public string Name { get; set; }
 
         [Required(ErrorMessage = "Beskrivelse af din event er nødvendig og må maks være på 200 tegn"),
