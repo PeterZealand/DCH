@@ -14,22 +14,22 @@
         <span asp-validation-for="@Model.Event.Id" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Event.Name" class="control-label">Name </label>
+        <label asp-for="@Model.Event.Name" class="control-label">Event Navn</label>
         <input asp-for="@Model.Event.Name" class="form-control" />
         <span asp-validation-for="@Model.Event.Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Event.Description" class="control-label">Description</label>
+        <label asp-for="@Model.Event.Description" class="control-label">Beskrivelse</label>
         <input asp-for="@Model.Event.Description" class="form-control" />
         <span asp-validation-for="@Model.Event.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Event.City" class="control-label">City</label>
+        <label asp-for="@Model.Event.City" class="control-label">By</label>
         <input asp-for="@Model.Event.City" class="form-control" />
         <span asp-validation-for="@Model.Event.City" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Event.DateTime" class="control-label">DateTime</label>
+        <label asp-for="@Model.Event.DateTime" class="control-label">Dato og klokkeslet</label>
         <input asp-for="@Model.Event.DateTime" value="@Model.Event.DateTime.ToString("DD-MM-YYYY")" class="form-control" />
         <span asp-validation-for="@Model.Event.DateTime" class="text-danger"></span>
     </div>

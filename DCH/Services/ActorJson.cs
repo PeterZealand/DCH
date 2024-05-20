@@ -69,7 +69,12 @@ namespace DCH.Services
 
         public void UpdateActor(Actor Actor)
         {
-            throw new NotImplementedException();
+            Dictionary<int, Actor> actors = AllActors();
+            if (Actor != null)
+            {
+                actors[(int)Actor.Id] = Actor;
+            }
+            JsonFileWriter.WriteToJsonAc(actors, JsonFileName);
         }
     }
 }
