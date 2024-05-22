@@ -6,6 +6,8 @@ namespace DCH.Models
     {
         public int Id { get; set; }
 
+        public int ClickCount { get; set; } = 0;
+      
         [Required(ErrorMessage = "Indtsast venligst navn på event"),
             MinLength(1), MaxLength(40),]
         public string Name { get; set; }

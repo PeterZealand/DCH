@@ -9,7 +9,7 @@ namespace DCH.Pages.Actors
         private IActorRepository catalog;  
         public Dictionary<int, @DCH.Models.Actor> FilteredActors { get; set; }
 
-        //Skal supporte get for at kunne bruges som søgefunktion
+        //Skal supporte get for at kunne bruges som sÃ¸gefunktion
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
