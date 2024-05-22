@@ -1,0 +1,17 @@
+﻿@page
+@model DCH.Pages.Login.AdminOptionsModel
+@{
+    ViewData["Title"] = "Administration";
+}
+
+<h1>Administrer eventkalenderen</h1>
+
+<p> Her kan du administrerer events eller brugere:</p>
+
+    <div class="admin-Btn">
+        <a asp-page="/Events/GetAllEvents" class="btn btn-primary">Administrer events</a>
+    </div>
+
+    <div class="admin-Btn">
+        <a asp-page="/Actors/GetAllActors" class="btn btn-primary">Administrer brugere</a>
+    </div>

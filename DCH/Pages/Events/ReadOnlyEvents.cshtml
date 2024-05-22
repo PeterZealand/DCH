@@ -1,0 +1,64 @@
+﻿@page
+@model DCH.Pages.Events.ReadOnlyEventsModel
+@{
+    ViewData["Title"] = "ReadOnlyEvents";
+}
+<h1>Se alle events</h1>
+
+<div id="search">
+    <form>
+        <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Søg" />
+
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                City
+            </th>
+            <th>
+                DateTime
+            </th>
+            <th>
+                Antal tilmeldte
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @item.Value.Name
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.City
+                </td>
+                <td>
+                    @item.Value.DateTime
+                </td>
+@*                 <td>
+                    @item.Value.ClickCount
+                </td> *@
+                <td>
+                    <p>
+                        <a asp-page="Register" asp-route-id="@item.Key" class="btn btn-success">Tilmeld</a>
+                    </p>                  
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
