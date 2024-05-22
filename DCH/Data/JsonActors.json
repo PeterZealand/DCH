@@ -3,10 +3,10 @@
     "Id": 0,
     "FirstName": "Paprika",
     "LastName": "Seidler",
-    "Email": "ps@hotmail.com",
-    "Address": "adersse ",
-    "City": "by ",
-    "PhoneNumber": 99887766,
+    "Email": "123@hotmail.com",
+    "Address": "adersse 1",
+    "City": "by 1",
+    "PhoneNumber": "11223344",
     "Dog": true
   },
   "1": {
@@ -16,7 +16,7 @@
     "Email": "123@hotmail.com",
     "Address": "null",
     "City": "null",
-    "PhoneNumber": 12341234,
+    "PhoneNumber": "12341234",
     "Dog": false
   },
   "2": {
@@ -26,7 +26,7 @@
     "Email": "peteremail@gmail.com",
     "Address": "Peter adresse",
     "City": "Holbæk",
-    "PhoneNumber": 21212121,
+    "PhoneNumber": "21212121",
     "Dog": true
   }
 }

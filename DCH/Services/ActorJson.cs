@@ -7,7 +7,7 @@ namespace DCH.Services
 {
     public class ActorJson : IActorRepository
     {
-        string JsonFileName = @"C:\Users\papri\OneDrive - Zealand\Skrivebord\Projekt 1. sem\DcH\DCH\Data\JsonActors.json";
+        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json";
         //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json
 
         private readonly Dictionary<int, Actor> actors = new Dictionary<int, Actor>();
@@ -66,9 +66,9 @@ namespace DCH.Services
         //    {
         //        foreach (var a in Actor.Values)
         //        {
-        //            if (a.FirstName.Contains(criteria, StringComparison.OrdinalIgnoreCase) || 
-        //                a.LastName.Contains(criteria, StringComparison.OrdinalIgnoreCase) || 
-        //                a.Email.Contains(criteria, StringComparison.OrdinalIgnoreCase) || 
+        //            if (a.FirstName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
+        //                a.LastName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
+        //                a.Email.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
         //                a.City.Contains(criteria, StringComparison.OrdinalIgnoreCase))
         //            {
         //                myActors.Add(a.Id, a);
@@ -78,13 +78,13 @@ namespace DCH.Services
         //    return myActors;
         //}
 
-        // Method that can also handle Ints
+        //Method that can also handle Ints
         public Dictionary<int, Actor> FilterActors(string criteria)
         {
             Dictionary<int, Actor> Actors = AllActors();
             Dictionary<int, Actor> filteredActors = new Dictionary<int, Actor>();
 
-            if (!string.IsNullOrEmpty(criteria))
+            if (criteria != null)
             {
                 // Try to parse the criteria as an int for ID and PhoneNumber comparison
                 bool isNumericCriteria = int.TryParse(criteria, out int numericCriteria);
