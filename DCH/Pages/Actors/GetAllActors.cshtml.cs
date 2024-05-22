@@ -7,6 +7,10 @@ namespace DCH.Pages.Actors
     public class GetAllActorsModel : PageModel
     {
         private IActorRepository catalog;  
+        public Dictionary<int, @DCH.Models.Actor> FilteredActors { get; set; }
+
+        [BindProperty]
+        public string FilterCriteria { get; set; }
 
         public GetAllActorsModel(IActorRepository cat)
         {
@@ -17,6 +21,10 @@ namespace DCH.Pages.Actors
         public IActionResult OnGet()
         {
             actors = catalog.AllActors();
+            if (!string.IsNullOrEmpty(FilterCriteria))
+            {
+                actors = catalog.FilterActors(FilterCriteria);
+            }
             return Page();
         }
     }
