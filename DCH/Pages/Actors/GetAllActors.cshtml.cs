@@ -9,7 +9,7 @@ namespace DCH.Pages.Actors
         private IActorRepository catalog;  
         public Dictionary<int, @DCH.Models.Actor> FilteredActors { get; set; }
 
-        [BindProperty]
+        [BindProperty (SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
         public GetAllActorsModel(IActorRepository cat)

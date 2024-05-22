@@ -2,6 +2,7 @@ html {
     font-size: 14px;
 }
 
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
@@ -68,3 +69,44 @@ body {
 .login-input {
     width: 40%;
 }
+
+.back-btn {
+    padding: 10px;
+}
+
+
+.home-container {
+    position: relative;
+    align-content:left;
+    /*text-align: center;*/
+    color: white;
+    width: 100%; /* Ensure the container spans the full width */
+    margin: 0; /* Remove any default margin */
+    padding: 25px;
+}
+
+.centeredH1 {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%)
+}
+
+.responsive-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.privacy {
+    text-align: center; /* Center text and inline elements horizontally */
+    margin: 0; /* Reset any default margin */
+    padding: 0; /* Reset any default padding */
+}
+
+    .privacy img {
+        display: inline-block; /* Ensure the image respects text alignment */
+        margin: 20px 0; /* Optional: to add some space around the image */
+    }

@@ -6,6 +6,8 @@ namespace DCH.Models
     {
         public int Id { get; set; }
 
+        public int ClickCount { get; set; } = 0;
+
         [Required(ErrorMessage = "Navn på event er påkrævet og må max være 40 tegn."), MinLength(1), MaxLength(40)]
         public string Name { get; set; }
 

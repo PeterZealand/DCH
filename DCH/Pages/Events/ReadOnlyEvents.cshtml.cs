@@ -8,7 +8,7 @@ namespace DCH.Pages.Events
     public class ReadOnlyEventsModel : PageModel
     {
         private IEventRepository catalog;
-        //public int ClickCount { get; set; } = 0;
+        public int ClickCount { get; set; } = 0;
         public Dictionary<int, Event> FilteredEvents { get; set; }
 
         [BindProperty(SupportsGet = true)]
@@ -29,15 +29,15 @@ namespace DCH.Pages.Events
             return Page();
         }
 
-        //// ClickCount tæller hver gang der klikkes på tilmeld --> virker ikke
-        //public IActionResult OnPostBottunClick(int id) 
-        //{
-        //    if (Events.ContainsKey(id)) 
-        //    {
-        //        Events[id].ClickCount++;
-        //    }
-        //    return RedirectToPage();
-        //}
+        // ClickCount tæller hver gang der klikkes på tilmeld --> virker ikke
+        public IActionResult OnPostBottunClick()
+        {
+            //if (Events.ContainsKey(id))
+            //{
+            ClickCount++;
+            //}
+            return Page();
+        }
     }
 }
 
