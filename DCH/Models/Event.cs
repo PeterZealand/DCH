@@ -15,7 +15,6 @@ namespace DCH.Models
         public string Description { get; set; }
 
         [Required(ErrorMessage = "Bynavn er påkrævet"), MinLength(1), MaxLength(20),]
-        //[StringLength(20, ErrorMessage = "Bynavn må ikke være længere end 20 tegn.")]
         public string City { get; set; }
 
         [Required(ErrorMessage = "DateTime is required")] //Dette er en indbygget valideringsattribut i .NET, der angiver, at DateTime-egenskaben er påkrævet, hvilket betyder, at den ikke kan være null. Hvis værdien er null, eller hvis feltet er tomt, vil denne valideringsattribut tilføje fejlmeddelelsen "DateTime is required"

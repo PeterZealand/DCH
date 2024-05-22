@@ -20,16 +20,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Forside</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privatlivspolitik</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Events/GetAllEvents">Alle Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Actors/GetAllActors">Brugere</a>
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Events/ReadOnlyEvents">Events</a>
                         </li>
                     </ul>
                 </div>
@@ -43,8 +40,11 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - DCH - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        <div id="footer-container">
+            &copy; 2024 - DcH - <a asp-area="" asp-page="/Privacy">Privatlivspolitik</a>
+        </div>
+        <div class="AdminLogin">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Login/AdminLogin">Login som Admin</a>
         </div>
     </footer>
 
