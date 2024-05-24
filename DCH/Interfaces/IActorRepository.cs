@@ -10,5 +10,6 @@ namespace DCH.Interfaces
         void AddActor(Actor Actor);
         void UpdateActor(Actor Actor);
         Actor GetActors(int id);
+        //Actor ActorLogin(string Email, string Password);
     }
 }
