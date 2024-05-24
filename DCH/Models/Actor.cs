@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 using static DCH.Pages.Actors.CreateActorsModel;
 
 namespace DCH.Models
@@ -32,8 +33,24 @@ namespace DCH.Models
         [MinLength(8), MaxLength(8), NumericOnly]
         public string PhoneNumber { get; set; }
 
-
         public bool Dog { get; set; }
+
         
+        //denne kode skal vi lige helt forstå og ha styr på om virker
+        public class NumericOnlyAttribute : ValidationAttribute
+        {
+            protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+            {
+                if (value != null)
+                {
+                    var strValue = value.ToString();
+                    if (!Regex.IsMatch(strValue, @"^\d+$"))
+                    {
+                        return new ValidationResult("Indtast venligst kun tal for telefonnummer.");
+                    }
+                }
+                return ValidationResult.Success;
+            }
+        }
     }
 }
