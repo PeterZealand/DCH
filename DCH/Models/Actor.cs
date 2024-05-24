@@ -20,6 +20,8 @@ namespace DCH.Models
             MinLength(1), MaxLength(40),]
         public string Email { get; set; }
 
+        public string Password { get; set; }
+
         [Required(ErrorMessage = "Indtsast venligst adresse"),
             MinLength(1), MaxLength(100),]
         public string Address { get; set; }
