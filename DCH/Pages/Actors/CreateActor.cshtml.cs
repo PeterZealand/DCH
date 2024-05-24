@@ -2,6 +2,7 @@ using DCH.Interfaces;
 using DCH.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
 
 namespace DCH.Pages.Actors
@@ -37,14 +38,6 @@ namespace DCH.Pages.Actors
             return RedirectToPage("GetAllActors");
         }
 
-        private bool ParsePhoneNumber(string phoneNumber)
-        {
-            // Example: Ensure the phone number is exactly 8 digits long and contains only digits
-            return Regex.IsMatch(phoneNumber, @"^\d{8}$");
-        }
 
-        //public void OnGet()
-        //    {
-        //    }
     }
 }
