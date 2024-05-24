@@ -51,9 +51,11 @@ body {
 }
 
 .admin-Btn {
-    padding: 10px;
+    display: flex;
+    gap: 10px; /* Juster mellemrum mellem knapperne som ønsket */
+    /*padding: 10px;
     width: 100px;
-    align-content: center;
+    align-content: center;*/
 }
 
 .AdminLogin {
@@ -110,3 +112,19 @@ body {
         display: inline-block; /* Ensure the image respects text alignment */
         margin: 20px 0; /* Optional: to add some space around the image */
     }
+
+#hund {
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc; /* Tilføj en 1 pixel solid linje i bunden af .form-group */
+    margin-bottom: 20px; /* Kommentaren her er fjernet */
+}
+.button-container {
+    display: flex;
+    gap: 10px; /* Juster mellemrum mellem knapperne som ønsket */
+}
+
+.large-btn {
+    flex: 1; /* Lad knapperne vokse for at fylde tilgængelig plads */
+    //height: auto;
+    //width: auto
+}
