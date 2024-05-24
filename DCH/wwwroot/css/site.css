@@ -52,7 +52,7 @@ body {
 
 .admin-Btn {
     display: flex;
-    gap: 10px; /* Juster mellemrum mellem knapperne som ønsket */
+    gap: 10px; /* Juster mellemrum mellem knapperne som Ã¸nsket */
     /*padding: 10px;
     width: 100px;
     align-content: center;*/
@@ -113,18 +113,18 @@ body {
         margin: 20px 0; /* Optional: to add some space around the image */
     }
 
-.hund {
+#hund {
     margin-top: 10px;
-    border-bottom: 1px solid #ccc; /* Tilføj en 1 pixel solid linje i bunden af .form-group */
+    border-bottom: 1px solid #ccc; /* TilfÃ¸j en 1 pixel solid linje i bunden af .form-group */
     margin-bottom: 20px; /* Kommentaren her er fjernet */
 }
 .button-container {
     display: flex;
-    gap: 10px; /* Juster mellemrum mellem knapperne som ønsket */
+    gap: 10px; /* Juster mellemrum mellem knapperne som Ã¸nsket */
 }
 
 .large-btn {
-    flex: 1; /* Lad knapperne vokse for at fylde tilgængelig plads */
+    flex: 1; /* Lad knapperne vokse for at fylde tilgÃ¦ngelig plads */
     //height: auto;
     //width: auto
 }
