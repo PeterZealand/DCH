@@ -2,7 +2,7 @@
 
 namespace DCH.Interfaces
 {
-    public interface IActorRepository
+    public interface IActorRepository //Indeholder interface-definitioner, som beskriver kontrakter for services. Defineres før services, så services kan implementere disse interfaces.
     {
         Dictionary<int, Actor> AllActors();
         Dictionary<int, Actor> FilterActors(string criteria);
