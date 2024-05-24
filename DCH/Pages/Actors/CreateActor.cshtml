@@ -51,22 +51,6 @@
     <div class="form-group">
         <input type="submit" value="Create" class="btn btn-primary" />
     </div>
-    @if (Model.Message != null)
-    {
-        <div class="alert alert-success" role="alert">
-            @Model.Message
-        </div>
-    }
-
-    @section Scripts {
-        <partial name="_ValidationScriptsPartial" />
-        <script>
-            document.querySelector('input[type="tel"]').addEventListener('input', function (e) {
-                this.value = this.value.replace(/\D/, '');
-            });
-        </script>
-    }
-
     <div>
         <a asp-page="/Actors/GetAllActors">Tilbage til bruger listen</a>
     </div>
