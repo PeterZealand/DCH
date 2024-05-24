@@ -36,7 +36,7 @@ namespace DCH.Models
         public bool Dog { get; set; }
 
         
-        //denne kode skal vi lige helt forstå og ha styr på om virker
+        //denne kode skal vi lige helt forstå og ha styr på om virker - ser ud til at virke men kan den forklares ?
         public class NumericOnlyAttribute : ValidationAttribute
         {
             protected override ValidationResult IsValid(object value, ValidationContext validationContext)
