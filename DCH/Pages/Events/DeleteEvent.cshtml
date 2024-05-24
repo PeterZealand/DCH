@@ -39,9 +39,9 @@
                 @Html.DisplayFor(model => model.Event.DateTime)
             </dd>
         </dl>
-        <input type="submit" value="Delete" class="btn btn-danger" />
-    </form>
-    <div>
-        <a asp-page="GetAllEvents">Back to List</a>
-    </div>
+        <div class="form-group button-container">
+            <input type="submit" value="Slet" class="btn btn-primary large-btn" />
+            <a asp-page="/Events/GetAllEvents" class="btn btn-secondary large-btn">Tilbage til event listen</a>
+        </div>
+    </form>    
 </div> 

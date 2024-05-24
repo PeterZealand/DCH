@@ -57,9 +57,9 @@
                 @Html.DisplayFor(model => model.Actor.Dog)
             </dd>
         </dl>
-        <input type="submit" value="Delete" class="btn btn-danger" />
+        <div class="form-group button-container">
+            <input type="submit" value="Slet" class="btn btn-primary large-btn" />
+            <a asp-page="/Actors/GetAllActors" class="btn btn-secondary large-btn">Tilbage til bruger listen</a>
+        </div>
     </form>
-    <div>
-        <a asp-page="GetAllActors">Back to List</a>
-    </div>
 </div> 

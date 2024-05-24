@@ -13,6 +13,16 @@
         <span asp-validation-for="@Model.Actor.Id" class="text-danger"></span>
     </div>
     <div class="form-group">
+        <label asp-for="@Model.Actor.Email" class="control-label">Email (Må højst indholde 40 tegn)</label>
+        <input asp-for="@Model.Actor.Email" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Actor.Password" class="control-label">Password (Skal indeholde mindst 8 tegn og mindst 1 tal)</label>
+        <input asp-for="@Model.Actor.Password" class="form-control" />
+        <span asp-validation-for="@Model.Actor.Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label asp-for="@Model.Actor.FirstName" class="control-label">Fornavn (Må højst indholde 15 tegn)</label>
         <input asp-for="@Model.Actor.FirstName" class="form-control" />
         <span asp-validation-for="@Model.Actor.FirstName" class="text-danger"></span>
@@ -21,11 +31,6 @@
         <label asp-for="@Model.Actor.LastName" class="control-label">Efternavn (Må højst indholde 15 tegn)</label>
         <input asp-for="@Model.Actor.LastName" class="form-control" />
         <span asp-validation-for="@Model.Actor.LastName" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="@Model.Actor.Email" class="control-label">Email (Må højst indholde 40 tegn)</label>
-        <input asp-for="@Model.Actor.Email" class="form-control" />
-        <span asp-validation-for="@Model.Actor.Email" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="@Model.Actor.Address" class="control-label">Adresse (Må højst indholde 100 tegn)</label>
@@ -42,13 +47,11 @@
         <input asp-for="@Model.Actor.PhoneNumber" class="form-control" />
         <span asp-validation-for="@Model.Actor.PhoneNumber" class="text-danger"></span>
     </div>
-
     <div id="hund" class="form-group">
-        <label asp-for="@Model.Actor.Dog" class="control-label">Hund</label>
+        <label asp-for="@Model.Actor.Dog" class="control-label">Hund (Ja/Nej)</label>
         <input asp-for="@Model.Actor.Dog"  type="checkbox"/>
         <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
     </div>
-
     <div class="form-group button-container">
         <input type="submit" value="Opret bruger" class="btn btn-primary large-btn" />
         <a asp-page="/Actors/GetAllActors" class="btn btn-secondary large-btn">Tilbage til bruger listen</a>

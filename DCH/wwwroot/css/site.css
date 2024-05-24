@@ -119,6 +119,7 @@ body {
     margin-bottom: 20px; /* Kommentaren her er fjernet */
 }
 .button-container {
+    margin-top: 10px;
     display: flex;
     gap: 10px; /* Juster mellemrum mellem knapperne som ønsket */
 }
@@ -128,3 +129,9 @@ body {
     //height: auto;
     //width: auto
 }
+.btn medlem login{
+    flex: 1; /* Lad knapperne vokse for at fylde tilgængelig plads */
+    //height: auto;
+    //width: auto
+}
+
