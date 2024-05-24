@@ -2,6 +2,10 @@
 {
     public class Register
     {
+
+        //Denne klasse bruges ikke til noget endnu.
+
+        
         //private Actor _actor;
         //private Event _event;
 
