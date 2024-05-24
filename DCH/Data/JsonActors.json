@@ -28,15 +28,5 @@
     "City": "Holbæk",
     "PhoneNumber": "21212121",
     "Dog": true
-  },
-  "3": {
-    "Id": 3,
-    "FirstName": "Morten Chami",
-    "LastName": "Berner",
-    "Email": "mlberner82@gmail.com",
-    "Address": "Knolden 101A",
-    "City": "Roskilde",
-    "PhoneNumber": "44444444",
-    "Dog": false
   }
 }

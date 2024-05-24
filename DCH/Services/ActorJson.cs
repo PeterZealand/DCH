@@ -7,9 +7,9 @@ namespace DCH.Services
 {
     public class ActorJson : IActorRepository
     {
-        //string JsonFileName = @"C:\Users\mlber\source\repos\DCH\DCH\Data\JsonActors.json";
         string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json";
-        
+        //C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonActors.json
+
         private readonly Dictionary<int, Actor> actors = new Dictionary<int, Actor>();
         private int currentId = 0;
 
@@ -95,12 +95,11 @@ namespace DCH.Services
                     bool matchesStringCriteria = a.FirstName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
                                                  a.LastName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
                                                  a.Email.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
-                                                 a.City.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
-                                                 a.PhoneNumber.Contains(criteria, StringComparison.OrdinalIgnoreCase);
+                                                 a.City.Contains(criteria, StringComparison.OrdinalIgnoreCase);
 
                     // Check numeric properties if the criteria is numeric
                     bool matchesNumericCriteria = isNumericCriteria &&
-                                                  (a.Id == numericCriteria);// = || a.PhoneNumber == numericCriteria ;
+                                                  (a.Id == numericCriteria || a.PhoneNumber == numericCriteria);
 
                     if (matchesStringCriteria || matchesNumericCriteria)
                     {

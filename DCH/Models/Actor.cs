@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using static DCH.Pages.Actors.CreateActorsModel;
 
 namespace DCH.Models
 {
@@ -27,11 +26,7 @@ namespace DCH.Models
             MinLength(1), MaxLength(20),]
         public string City { get; set; }
 
-        [Required(ErrorMessage = "Indtast venligst telefonnummer")]
-        //[StringLength(8, ErrorMessage = "Telefonnummer må højst være 8 tegn")]
-        [MinLength(8), MaxLength(8), NumericOnly]
-        public string PhoneNumber { get; set; }
-
+        public int PhoneNumber { get; set; }
 
         public bool Dog { get; set; }
         

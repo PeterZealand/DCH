@@ -1,9 +1,9 @@
 ﻿@page
 @model DCH.Pages.Actors.UpdateActorsModel
 @{
-    ViewData["Title"] = "Updater bruger";
+    ViewData["Title"] = "Update Actor";
 }
-<h1>Updater bruger</h1>
+<h1>Update Actor</h1>
 <form method="post">
 
     <div class="form-group">
@@ -12,32 +12,32 @@
         <span asp-validation-for="@Model.Actor.Id" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.FirstName" class="control-label">Fornavn (Må højst indholde 15 tegn) </label>
+        <label asp-for="@Model.Actor.FirstName" class="control-label">Fornavn</label>
         <input asp-for="@Model.Actor.FirstName" class="form-control" />
         <span asp-validation-for="@Model.Actor.FirstName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.LastName" class="control-label">Efternavn (Må højst indholde 15 tegn)</label>
+        <label asp-for="@Model.Actor.LastName" class="control-label">Efternavn</label>
         <input asp-for="@Model.Actor.LastName" class="form-control" />
         <span asp-validation-for="@Model.Actor.LastName" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.Email" class="control-label">Email (Må højst indholde 40 tegn)</label>
+        <label asp-for="@Model.Actor.Email" class="control-label">Email</label>
         <input asp-for="@Model.Actor.Email" class="form-control" />
         <span asp-validation-for="@Model.Actor.Email" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.Address" class="control-label">Adresse (Må højst indholde 100 tegn)</label>
+        <label asp-for="@Model.Actor.Address" class="control-label">Adresse</label>
         <input asp-for="@Model.Actor.Address" class="form-control" />
         <span asp-validation-for="@Model.Actor.Address" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.City" class="control-label">By (Må højst indholde 20 tegn)</label>
+        <label asp-for="@Model.Actor.City" class="control-label">By</label>
         <input asp-for="@Model.Actor.City" class="form-control" />
         <span asp-validation-for="@Model.Actor.City" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Actor.PhoneNumber" class="control-label">Tlf. Nr. (Et telefonnummer indholder 8 ciffer)</label>
+        <label asp-for="@Model.Actor.PhoneNumber" class="control-label">Tlf. Nr.</label>
         <input asp-for="@Model.Actor.PhoneNumber" class="form-control" />
         <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
     </div>
