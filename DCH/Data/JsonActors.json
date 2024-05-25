@@ -26,6 +26,7 @@
     "FirstName": "Peter",
     "LastName": "Eriksen",
     "Email": "peteremail@gmail.com",
+    "Password": null,
     "Address": "Peter adresse",
     "City": "Holbæk",
     "PhoneNumber": "21212121",
@@ -36,9 +37,21 @@
     "FirstName": "Morten Chami",
     "LastName": "Berner",
     "Email": "mlberner82@gmail.com",
+    "Password": null,
     "Address": "Knolden 101A",
     "City": "Roskilde",
     "PhoneNumber": "44444444",
     "Dog": false
+  },
+  "4": {
+    "Id": 4,
+    "FirstName": "Test af passwor",
+    "LastName": "Test af passwor",
+    "Email": "Test af password",
+    "Password": "hejmeddig1",
+    "Address": "Test af password",
+    "City": "Test af password",
+    "PhoneNumber": "12345678",
+    "Dog": true
   }
 }
