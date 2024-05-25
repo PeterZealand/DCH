@@ -6,8 +6,10 @@ namespace DCH.Services
 {
     public class EventJson : IEventRepository
     {
+        string JsonFileName = @"C:\Users\eriki\OneDrive - Zealand\Semester 1\Afleveringer\DCH\DCH\DCH\Data\JsonEvents.json";
         //string JsonFileName = @"C:\Users\mlber\source\repos\DCH\DCH\Data\JsonEvents.json";
-        string JsonFileName = @"C:\Users\sskli\source\repos\DCH\DCH\Data\JsonEvents.json";
+        //string JsonFileName = @"C:\Users\sskli\source\repos\DCH\DCH\Data\JsonEvents.json";
+
         
         private readonly Dictionary<int, Event> events = new Dictionary<int, Event>();
         private int currentId = 0;
