@@ -11,6 +11,8 @@ namespace DCH.Pages.Events
         public int ClickCount { get; set; } = 0;
         public Dictionary<int, Event> FilteredEvents { get; set; }
 
+        public Actor Actor { get; set; }
+
         [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
@@ -29,15 +31,31 @@ namespace DCH.Pages.Events
             return Page();
         }
 
-        // ClickCount tæller hver gang der klikkes på tilmeld --> virker ikke
-        public IActionResult OnPostBottunClick()
+        // ClickCount tæller hver gang der klikkes på tilmeld --> virker men kan klikkes op uendeligt og hænger ikke sammen med et actor ID endnu
+
+        public IActionResult OnPost(int eventId)
         {
-            //if (Events.ContainsKey(id))
-            //{
-            ClickCount++;
-            //}
+            Events = catalog.AllEvents();
+            if (Events.ContainsKey(eventId))
+            {
+                Events[eventId].ClickCount++;
+                catalog.UpdateEvent(Events[eventId]);
+            }
+
+            if (!string.IsNullOrEmpty(FilterCriteria))
+            {
+                Events = catalog.FilterEvents(FilterCriteria);
+            }
             return Page();
         }
+        //public IActionResult OnPostButtonClick()
+        //{
+        //    //if (Events.ContainsKey(id))
+        //    //{
+        //    ClickCount++;
+        //    //}
+        //    return Page();
+        //}
     }
 }
 

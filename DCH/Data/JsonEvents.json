@@ -1,6 +1,7 @@
 {
   "0": {
     "Id": 0,
+    "ClickCount": 5,
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -8,6 +9,7 @@
   },
   "1": {
     "Id": 1,
+    "ClickCount": 27,
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Køge",
@@ -15,6 +17,7 @@
   },
   "2": {
     "Id": 2,
+    "ClickCount": 1,
     "Name": "DM i lydighed",
     "Description": "Stor landsdækkene konkurrence",
     "City": "Faxe",
@@ -22,6 +25,7 @@
   },
   "3": {
     "Id": 3,
+    "ClickCount": 0,
     "Name": "DM i rally",
     "Description": "Stor landsdækkene konkurrence.",
     "City": "Næstved",
@@ -29,6 +33,7 @@
   },
   "4": {
     "Id": 4,
+    "ClickCount": 0,
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Roskilde",
@@ -36,6 +41,7 @@
   },
   "6": {
     "Id": 6,
+    "ClickCount": 0,
     "Name": "test1",
     "Description": "test test",
     "City": "testby",
@@ -43,6 +49,7 @@
   },
   "7": {
     "Id": 7,
+    "ClickCount": 0,
     "Name": "test sk",
     "Description": "test sk",
     "City": "test sk",
@@ -50,6 +57,7 @@
   },
   "8": {
     "Id": 8,
+    "ClickCount": 0,
     "Name": "test af datetime",
     "Description": "test",
     "City": "test",

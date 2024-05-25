@@ -55,7 +55,14 @@
                 </td>
                 <td>
                     <p>
-                        <a asp-page="Register" asp-route-id="@item.Key" class="btn btn-success">Tilmeld</a>
+                        <form method="post">
+                            <input type="hidden" name="eventId" value="@item.Key" />
+                            <button type="submit" class="btn btn-success">Tilmeld</button>
+                        </form>
+                        
+                            
+                         @* <a asp-page="Register" asp-route-id="@item.Key" class="btn btn-success">Tilmeld</a>  *@
+                        
                     </p>                  
                 </td>
             </tr>
