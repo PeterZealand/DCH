@@ -13,6 +13,7 @@ namespace DCH.Pages.Actors
         [BindProperty]
         public Actor Actor { get; set; }
 
+        public bool IsSuccessful { get; set; }
         public CreateActorsModel(IActorRepository cat)
         {
             catalog = cat;
@@ -37,7 +38,20 @@ namespace DCH.Pages.Actors
             }
             return RedirectToPage("GetAllActors");
         }
-
+        public IActionResult OnPostUser()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            if (Actor.Id == 0)
+            {
+                catalog.AddActor(Actor);
+            }
+            return RedirectToPage("OpretBrugerSuccess");
+            IsSuccessful = true; // Sætter indikatoren til true ved succesfuld oprettelse
+            return Page();
+        }
 
     }
 }
