@@ -1,7 +1,7 @@
 {
   "0": {
     "Id": 0,
-    "ClickCount": 5,
+    "ClickCount": 7,
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -25,7 +25,7 @@
   },
   "3": {
     "Id": 3,
-    "ClickCount": 0,
+    "ClickCount": 1,
     "Name": "DM i rally",
     "Description": "Stor landsdækkene konkurrence.",
     "City": "Næstved",

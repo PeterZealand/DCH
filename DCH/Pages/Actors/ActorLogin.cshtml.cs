@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using DCH.Models;
 using DCH.Interfaces;
+using Newtonsoft.Json;
 
 namespace DCH.Pages.Actors
 {
@@ -27,7 +28,14 @@ namespace DCH.Pages.Actors
         {
             if (CheckCredentials(actor.Email, actor.Password))
             {
-                return RedirectToPage("/Events/ReadOnlyEvents");
+                // Find den loggede brugers oplysninger
+                var loggedInActor = catalog.AllActors().Values
+                    .FirstOrDefault(a => a.Email.Equals(actor.Email, StringComparison.OrdinalIgnoreCase));
+
+                // Gem brugeren i sessionen efter succesfuldt login
+                HttpContext.Session.SetString("LoggedInActor", JsonConvert.SerializeObject(loggedInActor));
+
+                return RedirectToPage("/Actors/Profile"); // Omdiriger til profilsiden efter login
             }
             else
             {

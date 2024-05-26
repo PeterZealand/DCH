@@ -23,6 +23,9 @@ namespace DCH
             builder.Services.AddRazorPages();
             builder.Services.AddTransient<IEventRepository, EventJson>();
             builder.Services.AddTransient<IActorRepository, ActorJson>();
+
+            builder.Services.AddSession(); // Tilføjelse af session service
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -39,6 +42,8 @@ namespace DCH
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession(); // Tilføjelse af session middleware
 
             app.MapRazorPages();
 

@@ -7,6 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Login\Index.cshtml.cs" />
+    <Compile Remove="Pages\Login\Profile.cshtml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Pages\Login\Index.cshtml" />
+    <Content Remove="Pages\Login\Profile.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Pages\Users\" />
   </ItemGroup>
 
