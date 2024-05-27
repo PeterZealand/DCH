@@ -36,7 +36,7 @@
                 Dato og klokkeslæt
             </th>
             <th>
-                
+                Antal tilmeldte
             </th>
             <th>
                 
@@ -59,8 +59,12 @@
                 <td>
                     @item.Value.City
                 </td>
+                
                 <td>
                     @item.Value.DateTime
+                </td>
+                <td>
+                    @item.Value.ClickCount / @item.Value.MaxCount
                 </td>
                 <td>
                     <div class="button">
