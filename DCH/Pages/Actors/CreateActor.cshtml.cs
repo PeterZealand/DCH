@@ -3,6 +3,7 @@ using DCH.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Common;
 using System.Text.RegularExpressions;
 
 namespace DCH.Pages.Actors
@@ -31,13 +32,32 @@ namespace DCH.Pages.Actors
             {
                 return Page();
             }
-            if (Actor.Id == 0)
+
+            
+            if (CheckIfActorExists(Actor.Email) == true)
             {
-                catalog.AddActor(Actor);
+                // email adressen findes i listen og derfor sendes brugeren tilbage for at oprette sig med en anden email adresse
+                return RedirectToPage("CreateActor");
             }
-            return RedirectToPage("GetAllActors");
+            else 
+            {   
+                // email adressen findes ikke på medlemslisten og derfor bliver medlemet oprettet i systemet og sendes videre til login siden.
+                catalog.AddActor(Actor);        
+                return RedirectToPage("ActorLogin");
+            }
+    
+            // Medlemmer må ikke tilgå admin siden med alle medlemmer.
+            //return RedirectToPage("GetAllActors");
         }
 
-
+        
+        private bool CheckIfActorExists(string email)
+        {
+            var actors = catalog.AllActors();
+            
+            // tjek om der eksisterer et medlem med email adressen, som brugeren ønsker at oprette sig med.
+            return actors.Values.Any(a =>
+            a.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+        }
     }
 }
