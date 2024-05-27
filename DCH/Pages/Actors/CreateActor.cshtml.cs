@@ -37,16 +37,17 @@ namespace DCH.Pages.Actors
             if (CheckIfActorExists(Actor.Email) == true)
             {
                 // email adressen findes i listen og derfor sendes brugeren tilbage for at oprette sig med en anden email adresse
+                //TODO vi skal ha Ã¦ndret koden sÃ¥ den giver en fejl i stedet for at sende en tilbage til create actor
                 return RedirectToPage("CreateActor");
             }
             else 
             {   
-                // email adressen findes ikke på medlemslisten og derfor bliver medlemet oprettet i systemet og sendes videre til login siden.
+                // email adressen findes ikke pÃ¥ medlemslisten og derfor bliver medlemet oprettet i systemet og sendes videre til login siden.
                 catalog.AddActor(Actor);        
                 return RedirectToPage("ActorLogin");
             }
     
-            // Medlemmer må ikke tilgå admin siden med alle medlemmer.
+            // Medlemmer mÃ¥ ikke tilgÃ¥ admin siden med alle medlemmer.
             //return RedirectToPage("GetAllActors");
         }
 
@@ -55,7 +56,7 @@ namespace DCH.Pages.Actors
         {
             var actors = catalog.AllActors();
             
-            // tjek om der eksisterer et medlem med email adressen, som brugeren ønsker at oprette sig med.
+            // tjek om der eksisterer et medlem med email adressen, som brugeren Ã¸nsker at oprette sig med.
             return actors.Values.Any(a =>
             a.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
         }
