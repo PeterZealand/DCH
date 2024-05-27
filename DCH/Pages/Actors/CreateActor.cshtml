@@ -1,7 +1,8 @@
-﻿@page
+﻿@page "{source?}"
 @model DCH.Pages.Actors.CreateActorsModel
 @{
     ViewData["Title"] = "Opret bruger";
+    var source = Model.Source ?? "actor"; //Checks if the source of the button is other than /Actor. The default is /Actor
 }
 <h1>Opret bruger</h1>
 
@@ -54,6 +55,13 @@
     </div>
     <div class="form-group button-container">
         <input type="submit" value="Opret bruger" class="btn btn-primary large-btn" />
-        <a asp-page="/events/ReadOnlyEvents" class="btn btn-secondary large-btn">Tilbage til Event listen</a>
+        @if (source == "admin")
+        {
+            <a asp-page="/Actors/GetAllActors" class="btn btn-secondary large-btn">Tilbage til medlemslisten</a>
+        }
+        else
+        {
+            <a asp-page="/Actors/ActorLogin" class="btn btn-secondary large-btn">Tilbage til login</a>
+        }
     </div>
 </form>

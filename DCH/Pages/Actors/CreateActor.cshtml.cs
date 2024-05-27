@@ -13,6 +13,9 @@ namespace DCH.Pages.Actors
         [BindProperty]
         public Actor Actor { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public string Source { get; set; }
+
         public CreateActorsModel(IActorRepository cat)
         {
             catalog = cat;
