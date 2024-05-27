@@ -7,10 +7,12 @@ namespace DCH.Models
         public int Id { get; set; }
 
         //denne virker ikke mht max clics endnu
-        [Required(ErrorMessage = "Maks antal tilmeldte er nået"),
-            MinLength(0), MaxLength(20),]
+        //[Required(ErrorMessage = "Maks antal tilmeldte er nået"),
+        //    MinLength(0), MaxLength(20),]
+
         public int ClickCount { get; set; } = 0;
-      
+        public int MaxCount { get; set; }
+
         [Required(ErrorMessage = "Indtsast venligst navn på event"),
             MinLength(1), MaxLength(40),]
         public string Name { get; set; }
