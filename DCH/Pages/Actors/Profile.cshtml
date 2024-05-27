@@ -18,12 +18,13 @@
         <p><strong>Dog:</strong> @(Model.Actor.Dog ? "Yes" : "No")</p>
     </div>
     <div class="form-group button-container">
+        <a asp-page="/Events/ReadOnlyEvents" asp-route-id="@Model.Actor.Id" class="btn btn-success">Se Events</a>
         <!-- Tilføj link til opdatering af profil -->
         <a asp-page="/Actors/UpdateActor" asp-route-id="@Model.Actor.Id" class="btn btn-primary">Opdater profil</a>
         <!-- Tilføj link til sletning af profil -->
         <a asp-page="/Actors/DeleteActor" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Slet profil</a>
 
-        <a asp-page="/Events/ReadOnlyEvents" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Se Events</a>
+        
     </div>
 }
 else
