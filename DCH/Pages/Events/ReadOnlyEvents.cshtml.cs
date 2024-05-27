@@ -14,6 +14,9 @@ namespace DCH.Pages.Events
         public Actor Actor { get; set; }
 
         [BindProperty(SupportsGet = true)]
+        public string Source { get; set; }
+
+        [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
         public ReadOnlyEventsModel(IEventRepository cat)
@@ -38,8 +41,13 @@ namespace DCH.Pages.Events
             Events = catalog.AllEvents();
             if (Events.ContainsKey(eventId))
             {
-                Events[eventId].ClickCount++;
-                catalog.UpdateEvent(Events[eventId]);
+                if (Events[eventId].ClickCount <= Events[eventId].MaxCount - 1 )
+                {
+
+                    Events[eventId].ClickCount++;
+                    catalog.UpdateEvent(Events[eventId]);
+                }
+                       
             }
 
             if (!string.IsNullOrEmpty(FilterCriteria))

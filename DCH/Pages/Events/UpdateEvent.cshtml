@@ -27,6 +27,11 @@
         <span asp-validation-for="@Model.Event.City" class="text-danger"></span>
     </div>
     <div class="form-group">
+    <label asp-for="@Model.Event.MaxCount" class="control-label">Maks antal deltagere</label>
+    <input asp-for="@Model.Event.MaxCount" class="form-control" />
+    <span asp-validation-for="@Model.Event.MaxCount" class="text-danger"></span>
+    </div>
+    <div class="form-group">
         <label asp-for="@Model.Event.DateTime" class="control-label">Dato og klokkeslæt</label>
         <input asp-for="@Model.Event.DateTime" class="form-control" />
         <span asp-validation-for="@Model.Event.DateTime" class="text-danger"></span>

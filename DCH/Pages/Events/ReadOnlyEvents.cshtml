@@ -1,7 +1,8 @@
-﻿@page
+﻿@page "{source?}"
 @model DCH.Pages.Events.ReadOnlyEventsModel
 @{
     ViewData["Title"] = "ReadOnlyEvents";
+    var source = Model.Source ?? "actor"; 
 }
 <h1>Se alle events</h1>
 
@@ -51,10 +52,16 @@
                     @item.Value.DateTime
                 </td>
                 <td>
-                    @item.Value.ClickCount
+                    @item.Value.ClickCount / @item.Value.MaxCount
                 </td>
-                <td>
-                    <p>
+                @if (source != "actor")
+                {
+  
+                }
+                else
+                {
+                    <td>
+                        <p>
                         <form method="post">
                             <input type="hidden" name="eventId" value="@item.Key" />
                             <button type="submit" class="btn btn-success">Tilmeld</button>
@@ -63,8 +70,9 @@
                             
                          @* <a asp-page="Register" asp-route-id="@item.Key" class="btn btn-success">Tilmeld</a>  *@
                         
-                    </p>                  
-                </td>
+                        </p>                  
+                    </td>                    
+                }               
             </tr>
         }
     </tbody>

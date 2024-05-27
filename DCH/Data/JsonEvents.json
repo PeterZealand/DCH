@@ -1,7 +1,12 @@
 {
   "0": {
     "Id": 0,
+<<<<<<< ValidationUS6
     "ClickCount": 11,
+=======
+    "ClickCount": 23,
+    "MaxCount": 7,
+>>>>>>> master
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -9,7 +14,12 @@
   },
   "1": {
     "Id": 1,
+<<<<<<< ValidationUS6
     "ClickCount": 28,
+=======
+    "ClickCount": 32,
+    "MaxCount": 10,
+>>>>>>> master
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Køge",
@@ -17,15 +27,17 @@
   },
   "2": {
     "Id": 2,
-    "ClickCount": 2,
+    "ClickCount": 0,
+    "MaxCount": 100,
     "Name": "DM i lydighed",
     "Description": "Stor landsdækkene konkurrence",
     "City": "Faxe",
-    "DateTime": "2020-10-25T10:50:00"
+    "DateTime": "2024-10-25T07:00:00"
   },
   "3": {
     "Id": 3,
-    "ClickCount": 0,
+    "ClickCount": 12,
+    "MaxCount": 0,
     "Name": "DM i rally",
     "Description": "Stor landsdækkene konkurrence.",
     "City": "Næstved",
@@ -33,7 +45,8 @@
   },
   "4": {
     "Id": 4,
-    "ClickCount": 0,
+    "ClickCount": 1,
+    "MaxCount": 0,
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Roskilde",
@@ -41,7 +54,8 @@
   },
   "6": {
     "Id": 6,
-    "ClickCount": 0,
+    "ClickCount": 5,
+    "MaxCount": 5,
     "Name": "test1",
     "Description": "test test",
     "City": "testby",
@@ -49,7 +63,12 @@
   },
   "7": {
     "Id": 7,
+<<<<<<< ValidationUS6
     "ClickCount": 1,
+=======
+    "ClickCount": 0,
+    "MaxCount": 0,
+>>>>>>> master
     "Name": "test sk",
     "Description": "test sk",
     "City": "test sk",
@@ -57,7 +76,12 @@
   },
   "8": {
     "Id": 8,
+<<<<<<< ValidationUS6
     "ClickCount": 2,
+=======
+    "ClickCount": 0,
+    "MaxCount": 0,
+>>>>>>> master
     "Name": "test af datetime",
     "Description": "test",
     "City": "test",
