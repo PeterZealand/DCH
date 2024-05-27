@@ -22,7 +22,7 @@ namespace DCH.Models
 
         [Required(ErrorMessage = "Kode skal indeholde min. 8 tegn og 1 tal")]
         [MinLength(8, ErrorMessage = "Kode skal indeholde mindst 8 tegn")]
-        [RegularExpression(@"^(?=.*\d).{8,}$", ErrorMessage = "Kode skal indeholde mindst 8 tegn og mindst 1 tal")]
+        [RegularExpression(@"^(?=.*\d).{8,}$", ErrorMessage = "Kode skal indeholde mindst 8 tegn og mindst 1 tal")] //TODO hvordan virker dette?
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Indtsast venligst adresse"),
