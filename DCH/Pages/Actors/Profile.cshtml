@@ -22,6 +22,8 @@
         <a asp-page="/Actors/UpdateActor" asp-route-id="@Model.Actor.Id" class="btn btn-primary">Opdater profil</a>
         <!-- Tilføj link til sletning af profil -->
         <a asp-page="/Actors/DeleteActor" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Slet profil</a>
+
+        <a asp-page="/Events/ReadOnlyEvents" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Se Events</a>
     </div>
 }
 else
