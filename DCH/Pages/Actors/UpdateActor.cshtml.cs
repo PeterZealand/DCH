@@ -2,6 +2,7 @@ using DCH.Interfaces;
 using DCH.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
 
 namespace DCH.Pages.Actors
 {
@@ -16,10 +17,15 @@ namespace DCH.Pages.Actors
         {
             catalog = cat;
         }
-
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             Actor = catalog.GetActors(id);
+            if (Actor == null)
+            {
+                // Hvis brugeren ikke findes, omdiriger til en fejlside
+                return RedirectToPage("/Error");
+            }
+            return Page();
         }
 
         public IActionResult OnPost()
@@ -29,7 +35,11 @@ namespace DCH.Pages.Actors
                 return Page();
             }
             catalog.UpdateActor(Actor);
-            return RedirectToPage("GetAllActors");
+            // Opdater sessionen med de nyeste brugeroplysninger
+            HttpContext.Session.SetString("LoggedInActor", JsonConvert.SerializeObject(Actor));
+
+            // Ændring: Omdiriger til profilsiden efter opdatering
+            return RedirectToPage("/Actors/Profile");
         }
     }
 }

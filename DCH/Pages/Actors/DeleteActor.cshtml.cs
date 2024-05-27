@@ -20,13 +20,19 @@ namespace DCH.Pages.Actors
         public IActionResult OnGet(int id)
         {
             Actor = catalog.GetActors(id);
+            if (Actor == null)
+            {
+                // Hvis brugeren ikke findes, omdiriger til en fejlside
+                return RedirectToPage("/Error");
+            }
             return Page();
         }
 
         public IActionResult OnPost(int id)
         {
             catalog.DeleteActor(id);
-            return RedirectToPage("GetAllActors");
+            HttpContext.Session.Remove("LoggedInActor");
+            return RedirectToPage("/Actors/CreateActor");
         }
     }
 }
