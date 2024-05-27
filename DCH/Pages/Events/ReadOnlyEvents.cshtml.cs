@@ -14,6 +14,9 @@ namespace DCH.Pages.Events
         public Actor Actor { get; set; }
 
         [BindProperty(SupportsGet = true)]
+        public string Source { get; set; }
+
+        [BindProperty(SupportsGet = true)]
         public string FilterCriteria { get; set; }
 
         public ReadOnlyEventsModel(IEventRepository cat)
