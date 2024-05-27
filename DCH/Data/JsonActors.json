@@ -53,5 +53,16 @@
     "City": "Test af password",
     "PhoneNumber": "12345678",
     "Dog": true
+  },
+  "5": {
+    "Id": 5,
+    "FirstName": "Morten",
+    "LastName": "Berner",
+    "Email": "ff@ff.dk",
+    "Password": "123456789",
+    "Address": "Zealand 1",
+    "City": "Roskilde",
+    "PhoneNumber": "44444444",
+    "Dog": false
   }
 }
