@@ -1,12 +1,8 @@
 {
   "0": {
     "Id": 0,
-<<<<<<< ValidationUS6
-    "ClickCount": 11,
-=======
-    "ClickCount": 23,
+    "ClickCount": 5,
     "MaxCount": 7,
->>>>>>> master
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -14,12 +10,8 @@
   },
   "1": {
     "Id": 1,
-<<<<<<< ValidationUS6
-    "ClickCount": 28,
-=======
-    "ClickCount": 32,
+    "ClickCount": 9,
     "MaxCount": 10,
->>>>>>> master
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Køge",
@@ -55,7 +47,7 @@
   "6": {
     "Id": 6,
     "ClickCount": 5,
-    "MaxCount": 5,
+    "MaxCount": 4,
     "Name": "test1",
     "Description": "test test",
     "City": "testby",
@@ -63,12 +55,8 @@
   },
   "7": {
     "Id": 7,
-<<<<<<< ValidationUS6
     "ClickCount": 1,
-=======
-    "ClickCount": 0,
     "MaxCount": 0,
->>>>>>> master
     "Name": "test sk",
     "Description": "test sk",
     "City": "test sk",
@@ -76,15 +64,20 @@
   },
   "8": {
     "Id": 8,
-<<<<<<< ValidationUS6
     "ClickCount": 2,
-=======
-    "ClickCount": 0,
     "MaxCount": 0,
->>>>>>> master
     "Name": "test af datetime",
     "Description": "test",
     "City": "test",
     "DateTime": "2024-05-18T13:42:00"
+  },
+  "9": {
+    "Id": 9,
+    "ClickCount": 0,
+    "MaxCount": 19,
+    "Name": "fikset event creation",
+    "Description": "virker det nu ?",
+    "City": "testby",
+    "DateTime": "2024-05-30T14:00:00"
   }
 }
