@@ -2,7 +2,7 @@
 @model DCH.Pages.Events.ReadOnlyEventsModel
 @{
     ViewData["Title"] = "ReadOnlyEvents";
-    var source = Model.Source ?? "actor"; 
+    var source = Model.Source ?? "NotActor"; 
 }
 <h1>Se alle events</h1>
 
@@ -83,5 +83,13 @@
     </tbody>
 </table>
 <div class="back-btn">
-    <a asp-page="/Actors/Profile" class="btn btn-primary">Tilbage til din profil</a>
+    @if (source == "actor")
+    {
+        <a asp-page="/Actors/Profile" asp-route-source="actor" class="btn btn-primary">Tilbage til din profil</a> 
+    }
+    else
+    {
+               
+    }
+
 </div>
