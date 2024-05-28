@@ -64,5 +64,16 @@
     "City": "Roskilde",
     "PhoneNumber": "44444444",
     "Dog": false
+  },
+  "6": {
+    "Id": 6,
+    "FirstName": "Paprika",
+    "LastName": "Seidler",
+    "Email": "banditmus@hotmail.com",
+    "Password": "mormor22",
+    "Address": "Abildvænget",
+    "City": "Hårlev",
+    "PhoneNumber": "20767098",
+    "Dog": true
   }
 }
