@@ -13,6 +13,8 @@ namespace DCH.Models
         public int ClickCount { get; set; } = 0;
         public int MaxCount { get; set; }
 
+        public int ReverseCount { get; set; }
+
         public List<int> RegisteredActors { get; set; } = new List<int>();
 
         [Required(ErrorMessage = "Indtsast venligst navn på event"),

@@ -62,9 +62,14 @@
                 {
                     <td>
                         <p>
-                        <form method="post">
+                        <form method="post" asp-page-handler="Register">
                             <input type="hidden" name="eventId" value="@item.Key" />
                             <button type="submit" class="btn btn-success">Tilmeld</button>
+                        </form>
+
+                        <form method="post" asp-page-handler="UndoRegister">
+                            <input type="hidden" name="eventId" value="@item.Key" />
+                            <button type="submit" class="btn btn-danger">Admeld</button>
                         </form>
                         
                             
