@@ -10,6 +10,9 @@ namespace DCH.Pages.Actors
         [BindProperty]
         public Actor Actor { get; set; }
 
+        [BindProperty (SupportsGet = true)]
+        public string Source { get; set; }
+
         private IActorRepository catalog;
 
         public DeleteActorModel(IActorRepository actorRepository)
