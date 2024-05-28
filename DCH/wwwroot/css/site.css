@@ -33,6 +33,11 @@ body {
 
 .button p {
     margin: 2px;
+    width: 150px;
+}
+
+.same-width {
+    width: 100px;
 }
 
 .btn-secondary {
@@ -126,6 +131,8 @@ body {
 
 .large-btn {
     flex: 1; /* Lad knapperne vokse for at fylde tilgængelig plads */
+    max-width: 50%;
+    display: flex;
     //height: auto;
     //width: auto
 }
@@ -138,4 +145,8 @@ body {
 .bottom img {
     display: inline-block;
     align-content: center
+}
+
+.CRUD-btn {
+    width: 100px;
 }

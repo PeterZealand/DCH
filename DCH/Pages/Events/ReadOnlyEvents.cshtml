@@ -56,26 +56,27 @@
                 </td>
                 @if (source != "actor")
                 {
-  
+                   
                 }
                 else
                 {
                     <td>
-                        <p>
-                        <form method="post" asp-page-handler="Register">
-                            <input type="hidden" name="eventId" value="@item.Key" />
-                            <button type="submit" class="btn btn-success">Tilmeld</button>
-                        </form>
-
-                        <form method="post" asp-page-handler="UndoRegister">
-                            <input type="hidden" name="eventId" value="@item.Key" />
-                            <button type="submit" class="btn btn-danger">Admeld</button>
-                        </form>
+                        <div class="button">
+                            <p>
+                                <form method="post" asp-page-handler="Register">
+                                    <input type="hidden" name="eventId" value="@item.Key" />
+                                    <button type="submit" class="btn btn-success same-width">Tilmeld</button>
+                                </form>
+                            </p>
                         
-                            
-                         @* <a asp-page="Register" asp-route-id="@item.Key" class="btn btn-success">Tilmeld</a>  *@
+                            <p>
+                                <form method="post" asp-page-handler="UndoRegister">
+                                    <input type="hidden" name="eventId" value="@item.Key" />
+                                    <button type="submit" class="btn btn-danger same-width">Admeld</button>
+                                </form>
+                            </p>
                         
-                        </p>                  
+                        </div>                  
                     </td>                    
                 }               
             </tr>
