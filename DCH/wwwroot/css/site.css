@@ -135,3 +135,7 @@ body {
     //width: auto
 }
 
+.bottom img {
+    display: inline-block;
+    align-content: center
+}
