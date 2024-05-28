@@ -39,7 +39,7 @@ namespace DCH.Pages.Events
 
         // ClickCount tæller hver gang der klikkes på tilmeld --> virker men kan klikkes op uendeligt og hænger ikke sammen med et actor ID endnu
 
-        public IActionResult OnPost(int eventId)
+        public IActionResult OnPostRegister(int eventId)
         {
             var actorId = GetActorId();
 
@@ -52,8 +52,7 @@ namespace DCH.Pages.Events
                     Events[eventId].ClickCount++;
                     eventItem.RegisteredActors.Add(actorId);
                     catalog.UpdateEvent(Events[eventId]);
-                }
-                       
+                }                          
             }
 
             if (!string.IsNullOrEmpty(FilterCriteria))
@@ -62,14 +61,29 @@ namespace DCH.Pages.Events
             }
             return Page();
         }
-        //public IActionResult OnPostButtonClick()
-        //{
-        //    //if (Events.ContainsKey(id))
-        //    //{
-        //    ClickCount++;
-        //    //}
-        //    return Page();
-        //}
+        public IActionResult OnPostUndoRegister(int eventId)
+        {
+            var actorId = GetActorId();
+
+            Events = catalog.AllEvents();
+            if (Events.ContainsKey(eventId))
+            {
+                var eventItem = Events[eventId];
+
+                if (Events[eventId].ClickCount <= Events[eventId].MaxCount - 1 && eventItem.RegisteredActors.Contains(actorId))
+                {
+                    Events[eventId].ClickCount--;
+                    eventItem.RegisteredActors.Remove(actorId);
+                    catalog.UpdateEvent(Events[eventId]);
+                }
+            }
+
+            if (!string.IsNullOrEmpty(FilterCriteria))
+            {
+                Events = catalog.FilterEvents(FilterCriteria);
+            }
+            return Page();
+        }
 
         private int GetActorId()
         {
