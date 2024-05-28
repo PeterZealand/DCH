@@ -3,10 +3,7 @@
     "Id": 0,
     "ClickCount": 7,
     "MaxCount": 7,
-    "RegisteredActors": [
-      0,
-      5
-    ],
+    "RegisteredActors": [],
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -16,9 +13,7 @@
     "Id": 1,
     "ClickCount": 10,
     "MaxCount": 10,
-    "RegisteredActors": [
-      0
-    ],
+    "RegisteredActors": [],
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Køge",
@@ -26,12 +21,13 @@
   },
   "2": {
     "Id": 2,
-    "ClickCount": 3,
+    "ClickCount": 4,
     "MaxCount": 100,
     "RegisteredActors": [
       0,
       1,
-      5
+      5,
+      6
     ],
     "Name": "DM i lydighed",
     "Description": "Stor landsdækkene konkurrence",
