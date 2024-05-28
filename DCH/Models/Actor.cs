@@ -8,15 +8,15 @@ namespace DCH.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Indtsast venligst fornavn"),
+        [Required(ErrorMessage = "Indtast venligst fornavn"),
             MinLength(1), MaxLength(15),]
         public string FirstName { get; set; }
 
-        [Required(ErrorMessage = "Indtsast venligst efternavn"),
+        [Required(ErrorMessage = "Indtast venligst efternavn"),
             MinLength(1), MaxLength(15),]
         public string LastName { get; set; }
 
-        [Required(ErrorMessage = "Indtsast venligst email-adresse"),
+        [Required(ErrorMessage = "Indtast venligst e-mail-adresse"),
             MinLength(1), MaxLength(40),]
         public string Email { get; set; }
 
@@ -25,11 +25,11 @@ namespace DCH.Models
         [RegularExpression(@"^(?=.*\d).{8,}$", ErrorMessage = "Kode skal indeholde mindst 8 tegn og mindst 1 tal")] //TODO hvordan virker dette?
         public string Password { get; set; }
 
-        [Required(ErrorMessage = "Indtsast venligst adresse"),
+        [Required(ErrorMessage = "Indtast venligst adresse"),
             MinLength(1), MaxLength(100),]
         public string Address { get; set; }
 
-        [Required(ErrorMessage = "Indtsast venligst by"),
+        [Required(ErrorMessage = "Indtast venligst by"),
             MinLength(1), MaxLength(20),]
         public string City { get; set; }
 
