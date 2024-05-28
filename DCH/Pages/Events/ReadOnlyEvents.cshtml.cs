@@ -1,7 +1,10 @@
 using DCH.Interfaces;
 using DCH.Models;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
 
 namespace DCH.Pages.Events
 {
@@ -38,13 +41,16 @@ namespace DCH.Pages.Events
 
         public IActionResult OnPost(int eventId)
         {
+            var actorId = GetActorId();
+
             Events = catalog.AllEvents();
             if (Events.ContainsKey(eventId))
             {
-                if (Events[eventId].ClickCount <= Events[eventId].MaxCount - 1 )
+                var eventItem = Events[eventId];
+                if (Events[eventId].ClickCount <= Events[eventId].MaxCount - 1 && !eventItem.RegisteredActors.Contains(actorId))
                 {
-
                     Events[eventId].ClickCount++;
+                    eventItem.RegisteredActors.Add(actorId);
                     catalog.UpdateEvent(Events[eventId]);
                 }
                        
@@ -64,6 +70,17 @@ namespace DCH.Pages.Events
         //    //}
         //    return Page();
         //}
+
+        private int GetActorId()
+        {
+            var actorJson = HttpContext.Session.GetString("LoggedInActor");
+            if (actorJson != null)
+            {
+                var loggedInActor = JsonConvert.DeserializeObject<Actor>(actorJson);
+                return loggedInActor.Id;
+            }
+            return -1;
+        }
     }
 }
 

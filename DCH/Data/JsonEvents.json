@@ -1,8 +1,12 @@
 {
   "0": {
     "Id": 0,
-    "ClickCount": 5,
+    "ClickCount": 7,
     "MaxCount": 7,
+    "RegisteredActors": [
+      0,
+      5
+    ],
     "Name": "Hvalpe træning",
     "Description": "mange hvalpe der leger",
     "City": "Holbæk",
@@ -10,8 +14,11 @@
   },
   "1": {
     "Id": 1,
-    "ClickCount": 9,
+    "ClickCount": 10,
     "MaxCount": 10,
+    "RegisteredActors": [
+      0
+    ],
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Køge",
@@ -19,8 +26,13 @@
   },
   "2": {
     "Id": 2,
-    "ClickCount": 0,
+    "ClickCount": 3,
     "MaxCount": 100,
+    "RegisteredActors": [
+      0,
+      1,
+      5
+    ],
     "Name": "DM i lydighed",
     "Description": "Stor landsdækkene konkurrence",
     "City": "Faxe",
@@ -30,6 +42,7 @@
     "Id": 3,
     "ClickCount": 12,
     "MaxCount": 0,
+    "RegisteredActors": [],
     "Name": "DM i rally",
     "Description": "Stor landsdækkene konkurrence.",
     "City": "Næstved",
@@ -39,6 +52,7 @@
     "Id": 4,
     "ClickCount": 1,
     "MaxCount": 0,
+    "RegisteredActors": [],
     "Name": "Agility træning",
     "Description": "en masse løb og godbider",
     "City": "Roskilde",
@@ -48,6 +62,7 @@
     "Id": 6,
     "ClickCount": 5,
     "MaxCount": 4,
+    "RegisteredActors": [],
     "Name": "test1",
     "Description": "test test",
     "City": "testby",
@@ -57,6 +72,7 @@
     "Id": 7,
     "ClickCount": 1,
     "MaxCount": 0,
+    "RegisteredActors": [],
     "Name": "test sk",
     "Description": "test sk",
     "City": "test sk",
@@ -66,6 +82,7 @@
     "Id": 8,
     "ClickCount": 2,
     "MaxCount": 0,
+    "RegisteredActors": [],
     "Name": "test af datetime",
     "Description": "test",
     "City": "test",
@@ -75,6 +92,7 @@
     "Id": 9,
     "ClickCount": 0,
     "MaxCount": 19,
+    "RegisteredActors": [],
     "Name": "fikset event creation",
     "Description": "virker det nu ?",
     "City": "testby",
