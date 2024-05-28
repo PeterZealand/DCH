@@ -75,5 +75,16 @@
     "City": "Haslev",
     "PhoneNumber": "24354657",
     "Dog": true
+  },
+  "7": {
+    "Id": 7,
+    "FirstName": "Morten Chami",
+    "LastName": "Berner",
+    "Email": "test2@test.dk",
+    "Password": "123456789",
+    "Address": "Knolden 101A",
+    "City": "Roskilde",
+    "PhoneNumber": "77777777",
+    "Dog": true
   }
 }
