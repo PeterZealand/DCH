@@ -10,13 +10,15 @@
     <form method="post">
         <dl class="row">
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Actor.Id)
+                @* @Html.DisplayNameFor(model => model.Actor.Id) *@
+                <p>Bruger Id:</p>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Actor.Id)
             </dd>
             <dt class="col-sm-2">
-                @Html.DisplayNameFor(model => model.Actor.FirstName)
+                @* @Html.DisplayNameFor(model => model.Actor.FirstName) *@
+                <p>Fornavn:</p>
             </dt>
             <dd class="col-sm-10">
                 @Html.DisplayFor(model => model.Actor.FirstName)
