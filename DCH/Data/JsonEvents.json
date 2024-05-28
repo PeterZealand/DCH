@@ -86,9 +86,11 @@
   },
   "9": {
     "Id": 9,
-    "ClickCount": 0,
+    "ClickCount": 1,
     "MaxCount": 19,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      0
+    ],
     "Name": "fikset event creation",
     "Description": "virker det nu ?",
     "City": "testby",
