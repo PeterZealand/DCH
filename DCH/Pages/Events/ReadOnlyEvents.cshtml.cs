@@ -82,11 +82,14 @@ namespace DCH.Pages.Events
             return Page();
         }
 
-        private int GetActorId()
+        private int GetActorId() 
         {
+            //Findes the logged in json actorId
             var actorJson = HttpContext.Session.GetString("LoggedInActor");
+
             if (actorJson != null)
             {
+                //if actorJson is not null --> deserializing the specifik actor from json
                 var loggedInActor = JsonConvert.DeserializeObject<Actor>(actorJson);
                 return loggedInActor.Id;
             }
