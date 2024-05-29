@@ -53,19 +53,22 @@
         <input asp-for="@Model.Actor.Dog"  type="checkbox"/>
         <span asp-validation-for="@Model.Actor.Dog" class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <input type="submit" value="Opret bruger" class="btn btn-primary large-btn" />
+    
+        <div class="form-group button-container">
+            <input type="submit" value="Opret bruger" class="btn btn-primary large-btn" />
 
-    </div>        
-    <div class="form-group button-container">
-        @if (source == "admin")
-        {
-            <a asp-page="/Actors/GetAllActors" class="btn btn-secondary large-btn">Tilbage til medlemslisten</a>
-        }
-        else
-        {
-            <a asp-page="/Actors/ActorLogin" class="btn btn-secondary large-btn">Tilbage til login</a>
-        }
-    </div>
+        </div>
+        <div class="form-group button-container">
+            @if (source == "admin")
+            {
+                <a asp-page="/Actors/GetAllActors" class="btn btn-secondary large-btn">Tilbage til medlemslisten</a>
+            }
+            else
+            {
+                <a asp-page="/Actors/ActorLogin" class="btn btn-secondary large-btn">Tilbage til login</a>
+            }
+        </div>
+    
+
 
 </form>

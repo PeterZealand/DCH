@@ -2,13 +2,13 @@
   "0": {
     "Id": 0,
     "ClickCount": 0,
-    "MaxCount": 7,
+    "MaxCount": 20,
     "ReverseCount": 0,
     "RegisteredActors": [],
-    "Name": "Hvalpe træning",
-    "Description": "mange hvalpe der leger",
+    "Name": "Hvalpe konference",
+    "Description": "Lær og leg med din hvalp",
     "City": "Holbæk",
-    "DateTime": "2020-10-25T09:30:00"
+    "DateTime": "2024-10-25T09:30:00"
   },
   "1": {
     "Id": 1,
@@ -17,9 +17,9 @@
     "ReverseCount": 0,
     "RegisteredActors": [],
     "Name": "Agility træning",
-    "Description": "en masse løb og godbider",
+    "Description": "træning for øvede",
     "City": "Køge",
-    "DateTime": "2020-10-25T09:40:00"
+    "DateTime": "2024-10-25T09:40:00"
   },
   "2": {
     "Id": 2,
@@ -50,52 +50,52 @@
     "ReverseCount": 0,
     "RegisteredActors": [],
     "Name": "Agility træning begynder",
-    "Description": "en masse løb og godbider",
+    "Description": "Spring og forhindinger",
     "City": "Roskilde",
-    "DateTime": "2020-10-25T09:40:00"
+    "DateTime": "2024-10-25T09:40:00"
   },
   "6": {
     "Id": 6,
     "ClickCount": 0,
-    "MaxCount": 15,
+    "MaxCount": 9,
     "ReverseCount": 0,
     "RegisteredActors": [],
-    "Name": "test1",
-    "Description": "test test",
-    "City": "testby",
-    "DateTime": "2024-05-16T10:59:00"
+    "Name": "Rally-O",
+    "Description": "Hund og fører følger en bane med øvelsesskilte.",
+    "City": "Nivå",
+    "DateTime": "2024-07-22T11:00:00"
   },
   "7": {
     "Id": 7,
     "ClickCount": 0,
-    "MaxCount": 20,
+    "MaxCount": 50,
     "ReverseCount": 0,
     "RegisteredActors": [],
-    "Name": "test sk",
-    "Description": "test sk",
-    "City": "test sk",
-    "DateTime": "2024-05-10T19:17:00"
+    "Name": "Agility Blåbærstævne",
+    "Description": "Agilitystævne for begyndere",
+    "City": "Århus",
+    "DateTime": "2024-08-04T09:00:00"
   },
   "8": {
     "Id": 8,
     "ClickCount": 0,
-    "MaxCount": 30,
+    "MaxCount": 50,
     "ReverseCount": 0,
     "RegisteredActors": [],
-    "Name": "test af datetime",
-    "Description": "test",
-    "City": "test",
-    "DateTime": "2024-05-18T13:42:00"
+    "Name": "DcH på tværs",
+    "Description": "Kom og prøv forskellige hundesport",
+    "City": "Svendborg",
+    "DateTime": "2024-07-13T10:00:00"
   },
   "9": {
     "Id": 9,
     "ClickCount": 0,
-    "MaxCount": 19,
+    "MaxCount": 70,
     "ReverseCount": 0,
     "RegisteredActors": [],
-    "Name": "fikset event creation",
-    "Description": "virker det nu ?",
-    "City": "testby",
-    "DateTime": "2024-05-30T14:00:00"
+    "Name": "Uofficielt DM i Biatlon",
+    "Description": "Vær med i DM eller gå en hyggelig tur på ruten.",
+    "City": "Haslev",
+    "DateTime": "2024-09-01T14:00:00"
   }
 }
