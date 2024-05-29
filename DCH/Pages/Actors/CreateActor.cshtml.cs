@@ -38,11 +38,6 @@ namespace DCH.Pages.Actors
             {
                 return Page();
             }
-            //if (Actor.Id == 0)
-            //{
-            //    catalog.AddActor(Actor);
-            //}
-            //return RedirectToPage("ActorLogin");
 
             if (CheckIfActorExists(Actor.Email) == true)
             {
@@ -56,9 +51,6 @@ namespace DCH.Pages.Actors
                 catalog.AddActor(Actor);
                 return RedirectToPage("ActorLogin", new { source = Source });
             }
-
-           // Medlemmer må ikke tilgå admin siden med alle medlemmer.
-           // return RedirectToPage("GetAllActors");
         }
 
 

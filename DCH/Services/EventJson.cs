@@ -29,16 +29,6 @@ namespace DCH.Services
             }
         }
 
-        //public void AddEvent(Event Event)
-        //{
-        //    Dictionary<int, Event> events = AllEvents();
-        //    if (Event != null)
-        //    {
-        //        events[(int)Event.Id] = Event;
-        //    }
-        //    JsonFileWriter.WriteToJson(events, JsonFileName);
-        //}
-
         public void AddEvent(Event ev)
         {
             if (ev != null)
@@ -82,20 +72,12 @@ namespace DCH.Services
             }
             return myEvents;
         }
-    
-
 
         public Event GetEvents(int id)
         {
             Dictionary<int, Event> events = AllEvents();
             return events[id];
         }
-
-        //public Event GetEvents(int id)
-        //{
-        //    Dictionary<int, Event> events = AllEvents();
-        //    return events[id];
-        //}
 
         public void UpdateEvent(Event Event)
         {

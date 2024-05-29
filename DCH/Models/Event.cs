@@ -5,16 +5,9 @@ namespace DCH.Models
     public class Event
     {
         public int Id { get; set; }
-
-        //denne virker ikke mht max clics endnu
-        //[Required(ErrorMessage = "Maks antal tilmeldte er nået"),
-        //    MinLength(0), MaxLength(20),]
-
         public int ClickCount { get; set; } = 0;
         public int MaxCount { get; set; }
-
         public int ReverseCount { get; set; }
-
         public List<int> RegisteredActors { get; set; } = new List<int>();
 
         [Required(ErrorMessage = "Indtsast venligst navn på event"),

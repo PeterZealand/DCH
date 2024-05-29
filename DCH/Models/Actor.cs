@@ -34,7 +34,6 @@ namespace DCH.Models
         public string City { get; set; }
 
         [Required(ErrorMessage = "Indtast venligst telefonnummer")]
-        //[StringLength(8, ErrorMessage = "Telefonnummer må højst være 8 tegn")]
         [MinLength(8), MaxLength(8), NumericOnly]
         public string PhoneNumber { get; set; }
 

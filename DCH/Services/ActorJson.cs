@@ -42,12 +42,9 @@ namespace DCH.Services
         }
 
         public void AddActorIdNo(Actor ac)
-            {
-                ac.Id = currentId++;
-
-            }
-
-        
+        {
+            ac.Id = currentId++;
+        }
 
         public Dictionary<int, Actor> AllActors()
         {
@@ -61,27 +58,6 @@ namespace DCH.Services
             JsonFileWriter.WriteToJsonAc(actors, JsonFileName);
         }
 
-        //public Dictionary<int, Actor> FilterActors(string criteria)
-        //{
-        //    Dictionary<int, Actor> Actor = AllActors();
-        //    Dictionary<int, Actor> myActors = new Dictionary<int, Actor>();
-        //    if (criteria != null)
-        //    {
-        //        foreach (var a in Actor.Values)
-        //        {
-        //            if (a.FirstName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
-        //                a.LastName.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
-        //                a.Email.Contains(criteria, StringComparison.OrdinalIgnoreCase) ||
-        //                a.City.Contains(criteria, StringComparison.OrdinalIgnoreCase))
-        //            {
-        //                myActors.Add(a.Id, a);
-        //            }
-        //        }
-        //    }
-        //    return myActors;
-        //}
-
-        //Method that can also handle Ints
         public Dictionary<int, Actor> FilterActors(string criteria)
         {
             Dictionary<int, Actor> Actors = AllActors();
@@ -111,7 +87,6 @@ namespace DCH.Services
                     }
                 }
             }
-
             return filteredActors;
         }
 

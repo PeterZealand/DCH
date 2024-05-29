@@ -13,7 +13,6 @@ namespace DCH.Pages.Events
         private IEventRepository catalog;
         public int ClickCount { get; set; } = 0;
         public Dictionary<int, Event> FilteredEvents { get; set; }
-
         public Actor Actor { get; set; }
 
         [BindProperty(SupportsGet = true)]
@@ -36,8 +35,6 @@ namespace DCH.Pages.Events
             }
             return Page();
         }
-
-        // ClickCount tæller hver gang der klikkes på tilmeld --> virker men kan klikkes op uendeligt og hænger ikke sammen med et actor ID endnu
 
         public IActionResult OnPostRegister(int eventId)
         {
