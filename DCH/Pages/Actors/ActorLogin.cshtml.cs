@@ -8,12 +8,12 @@ namespace DCH.Pages.Actors
 {
     public class ActorLoginModel : PageModel
     {
+        private IActorRepository catalog;
+
         [BindProperty]
-        public Actor actor { get; set; }
+        public Actor Actor { get; set; }
 
         public string ErrorMessage { get; set; }
-
-        private IActorRepository catalog;
 
         public ActorLoginModel(IActorRepository actorRepository)
         {
@@ -26,11 +26,11 @@ namespace DCH.Pages.Actors
 
         public IActionResult OnPost()
         {
-            if (CheckCredentials(actor.Email, actor.Password))
+            if (CheckCredentials(Actor.Email, Actor.Password))
             {
                 // Find den loggede brugers oplysninger
                 var loggedInActor = catalog.AllActors().Values
-                    .FirstOrDefault(a => a.Email.Equals(actor.Email, StringComparison.OrdinalIgnoreCase));
+                    .FirstOrDefault(a => a.Email.Equals(Actor.Email, StringComparison.OrdinalIgnoreCase));
 
                 // Gem brugeren i sessionen efter succesfuldt login
                 HttpContext.Session.SetString("LoggedInActor", JsonConvert.SerializeObject(loggedInActor));
