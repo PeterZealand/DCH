@@ -41,8 +41,16 @@ namespace DCH.Pages.Actors
             // Opdater sessionen med de nyeste brugeroplysninger
             HttpContext.Session.SetString("LoggedInActor", JsonConvert.SerializeObject(Actor));
 
-            // Ændring: Omdiriger til profilsiden efter opdatering
-            return RedirectToPage("/Actors/Profile");
+            if (Source == "admin")
+            {
+                return RedirectToPage("/Actors/GetAllActors");
+            }
+            if (Source == "actor")
+            {
+                // Ændring: Omdiriger til profilsiden efter opdatering
+                return RedirectToPage("/Actors/Profile");
+            }
+            return Page();
         }
     }
 }

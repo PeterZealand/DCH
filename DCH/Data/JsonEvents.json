@@ -12,10 +12,15 @@
   },
   "1": {
     "Id": 1,
-    "ClickCount": 0,
-    "MaxCount": 10,
+    "ClickCount": 4,
+    "MaxCount": 4,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      8,
+      0,
+      1,
+      5
+    ],
     "Name": "Agility træning",
     "Description": "træning for øvede",
     "City": "Køge",
@@ -23,10 +28,14 @@
   },
   "2": {
     "Id": 2,
-    "ClickCount": 0,
+    "ClickCount": 3,
     "MaxCount": 100,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      2,
+      3,
+      4
+    ],
     "Name": "DM i lydighed",
     "Description": "Stor landsdækkene konkurrence",
     "City": "Faxe",
@@ -34,10 +43,13 @@
   },
   "3": {
     "Id": 3,
-    "ClickCount": 0,
+    "ClickCount": 2,
     "MaxCount": 100,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      8,
+      0
+    ],
     "Name": "DM i rally",
     "Description": "Stor landsdækkene konkurrence.",
     "City": "Næstved",
@@ -45,10 +57,14 @@
   },
   "4": {
     "Id": 4,
-    "ClickCount": 0,
+    "ClickCount": 3,
     "MaxCount": 8,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      5,
+      6,
+      7
+    ],
     "Name": "Agility træning begynder",
     "Description": "Spring og forhindinger",
     "City": "Roskilde",
@@ -67,10 +83,12 @@
   },
   "7": {
     "Id": 7,
-    "ClickCount": 0,
+    "ClickCount": 1,
     "MaxCount": 50,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      0
+    ],
     "Name": "Agility Blåbærstævne",
     "Description": "Agilitystævne for begyndere",
     "City": "Århus",
@@ -78,10 +96,20 @@
   },
   "8": {
     "Id": 8,
-    "ClickCount": 0,
+    "ClickCount": 9,
     "MaxCount": 50,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
     "Name": "DcH på tværs",
     "Description": "Kom og prøv forskellige hundesport",
     "City": "Svendborg",
@@ -89,10 +117,19 @@
   },
   "9": {
     "Id": 9,
-    "ClickCount": 0,
+    "ClickCount": 8,
     "MaxCount": 70,
     "ReverseCount": 0,
-    "RegisteredActors": [],
+    "RegisteredActors": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
     "Name": "Uofficielt DM i Biatlon",
     "Description": "Vær med i DM eller gå en hyggelig tur på ruten.",
     "City": "Haslev",
