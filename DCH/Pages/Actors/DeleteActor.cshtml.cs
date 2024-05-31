@@ -35,7 +35,16 @@ namespace DCH.Pages.Actors
         {
             catalog.DeleteActor(id);
             HttpContext.Session.Remove("LoggedInActor");
-            return RedirectToPage("/Actors/CreateActor");
+
+            if (Source == "admin")
+            {
+                return RedirectToPage("/Actors/GetAllActors");
+            }
+            if (Source == "actor")
+            {
+                return RedirectToPage("/Actors/ActorLogin");
+            }
+            return Page();
         }
     }
 }

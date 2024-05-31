@@ -21,8 +21,8 @@
         <a asp-page="/Events/ReadOnlyEvents" asp-route-source="actor" asp-route-id="@Model.Actor.Id" class="btn btn-success">Se Events</a>
         
         <a asp-page="/Actors/UpdateActor" asp-route-id="@Model.Actor.Id" asp-route-source="actor" class="btn btn-primary">Opdater profil</a>
-      
-        <a asp-page="/Actors/DeleteActor" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Slet profil</a>
+
+        <a asp-page="/Actors/DeleteActor" asp-route-source="actor" asp-route-id="@Model.Actor.Id" class="btn btn-danger">Slet profil</a>
 
         
     </div>
